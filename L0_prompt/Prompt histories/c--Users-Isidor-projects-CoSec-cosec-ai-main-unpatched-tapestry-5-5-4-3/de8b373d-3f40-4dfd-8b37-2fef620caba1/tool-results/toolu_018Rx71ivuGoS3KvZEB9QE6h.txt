@@ -1,0 +1,147 @@
+c:\Users\Isidor\projects\CoSec\cosec-ai-main\unpatched\tapestry-5-5.4.3\tapestry-core\src\main\java\org\apache\tapestry5\internal\services\exceptions\ExceptionReporterImpl.java-23-
+c:\Users\Isidor\projects\CoSec\cosec-ai-main\unpatched\tapestry-5-5.4.3\tapestry-core\src\main\java\org\apache\tapestry5\internal\services\exceptions\ExceptionReporterImpl.java-24-import java.io.File;
+c:\Users\Isidor\projects\CoSec\cosec-ai-main\unpatched\tapestry-5-5.4.3\tapestry-core\src\main\java\org\apache\tapestry5\internal\services\exceptions\ExceptionReporterImpl.java-25-import java.io.IOException;
+tapestry-core\src\main\java\org\apache\tapestry5\internal\services\exceptions\ExceptionReporterImpl.java:26:import java.io.PrintWriter;
+c:\Users\Isidor\projects\CoSec\cosec-ai-main\unpatched\tapestry-5-5.4.3\tapestry-core\src\main\java\org\apache\tapestry5\internal\services\exceptions\ExceptionReporterImpl.java-27-import java.util.Date;
+c:\Users\Isidor\projects\CoSec\cosec-ai-main\unpatched\tapestry-5-5.4.3\tapestry-core\src\main\java\org\apache\tapestry5\internal\services\exceptions\ExceptionReporterImpl.java-28-import java.util.concurrent.atomic.AtomicInteger;
+c:\Users\Isidor\projects\CoSec\cosec-ai-main\unpatched\tapestry-5-5.4.3\tapestry-core\src\main\java\org\apache\tapestry5\internal\services\exceptions\ExceptionReporterImpl.java-29-
+--
+c:\Users\Isidor\projects\CoSec\cosec-ai-main\unpatched\tapestry-5-5.4.3\tapestry-core\src\main\java\org\apache\tapestry5\internal\services\exceptions\ExceptionReporterImpl.java-115-    {
+c:\Users\Isidor\projects\CoSec\cosec-ai-main\unpatched\tapestry-5-5.4.3\tapestry-core\src\main\java\org\apache\tapestry5\internal\services\exceptions\ExceptionReporterImpl.java-116-        log.createNewFile();
+c:\Users\Isidor\projects\CoSec\cosec-ai-main\unpatched\tapestry-5-5.4.3\tapestry-core\src\main\java\org\apache\tapestry5\internal\services\exceptions\ExceptionReporterImpl.java-117-
+tapestry-core\src\main\java\org\apache\tapestry5\internal\services\exceptions\ExceptionReporterImpl.java:118:        PrintWriter writer = null;
+c:\Users\Isidor\projects\CoSec\cosec-ai-main\unpatched\tapestry-5-5.4.3\tapestry-core\src\main\java\org\apache\tapestry5\internal\services\exceptions\ExceptionReporterImpl.java-119-
+c:\Users\Isidor\projects\CoSec\cosec-ai-main\unpatched\tapestry-5-5.4.3\tapestry-core\src\main\java\org\apache\tapestry5\internal\services\exceptions\ExceptionReporterImpl.java-120-        try
+c:\Users\Isidor\projects\CoSec\cosec-ai-main\unpatched\tapestry-5-5.4.3\tapestry-core\src\main\java\org\apache\tapestry5\internal\services\exceptions\ExceptionReporterImpl.java-121-        {
+tapestry-core\src\main\java\org\apache\tapestry5\internal\services\exceptions\ExceptionReporterImpl.java:122:            writer = new PrintWriter(log);
+c:\Users\Isidor\projects\CoSec\cosec-ai-main\unpatched\tapestry-5-5.4.3\tapestry-core\src\main\java\org\apache\tapestry5\internal\services\exceptions\ExceptionReporterImpl.java-123-            exceptionReportWriter.writeReport(writer, exception);
+c:\Users\Isidor\projects\CoSec\cosec-ai-main\unpatched\tapestry-5-5.4.3\tapestry-core\src\main\java\org\apache\tapestry5\internal\services\exceptions\ExceptionReporterImpl.java-124-        } finally
+c:\Users\Isidor\projects\CoSec\cosec-ai-main\unpatched\tapestry-5-5.4.3\tapestry-core\src\main\java\org\apache\tapestry5\internal\services\exceptions\ExceptionReporterImpl.java-125-        {
+--
+c:\Users\Isidor\projects\CoSec\cosec-ai-main\unpatched\tapestry-5-5.4.3\tapestry-core\src\main\java\org\apache\tapestry5\internal\services\exceptions\ExceptionReportWriterImpl.java-30-import org.apache.tapestry5.services.RequestGlobals;
+c:\Users\Isidor\projects\CoSec\cosec-ai-main\unpatched\tapestry-5-5.4.3\tapestry-core\src\main\java\org\apache\tapestry5\internal\services\exceptions\ExceptionReportWriterImpl.java-31-import org.apache.tapestry5.services.Session;
+c:\Users\Isidor\projects\CoSec\cosec-ai-main\unpatched\tapestry-5-5.4.3\tapestry-core\src\main\java\org\apache\tapestry5\internal\services\exceptions\ExceptionReportWriterImpl.java-32-
+tapestry-core\src\main\java\org\apache\tapestry5\internal\services\exceptions\ExceptionReportWriterImpl.java:33:import java.io.PrintWriter;
+c:\Users\Isidor\projects\CoSec\cosec-ai-main\unpatched\tapestry-5-5.4.3\tapestry-core\src\main\java\org\apache\tapestry5\internal\services\exceptions\ExceptionReportWriterImpl.java-34-import java.lang.reflect.Array;
+c:\Users\Isidor\projects\CoSec\cosec-ai-main\unpatched\tapestry-5-5.4.3\tapestry-core\src\main\java\org\apache\tapestry5\internal\services\exceptions\ExceptionReportWriterImpl.java-35-import java.util.ArrayList;
+c:\Users\Isidor\projects\CoSec\cosec-ai-main\unpatched\tapestry-5-5.4.3\tapestry-core\src\main\java\org\apache\tapestry5\internal\services\exceptions\ExceptionReportWriterImpl.java-36-import java.util.Iterator;
+--
+c:\Users\Isidor\projects\CoSec\cosec-ai-main\unpatched\tapestry-5-5.4.3\tapestry-core\src\main\java\org\apache\tapestry5\internal\services\exceptions\ExceptionReportWriterImpl.java-71-     */
+c:\Users\Isidor\projects\CoSec\cosec-ai-main\unpatched\tapestry-5-5.4.3\tapestry-core\src\main\java\org\apache\tapestry5\internal\services\exceptions\ExceptionReportWriterImpl.java-72-    interface PropertyWriter
+c:\Users\Isidor\projects\CoSec\cosec-ai-main\unpatched\tapestry-5-5.4.3\tapestry-core\src\main\java\org\apache\tapestry5\internal\services\exceptions\ExceptionReportWriterImpl.java-73-    {
+tapestry-core\src\main\java\org\apache\tapestry5\internal\services\exceptions\ExceptionReportWriterImpl.java:74:        void write(String name, Object value);
+c:\Users\Isidor\projects\CoSec\cosec-ai-main\unpatched\tapestry-5-5.4.3\tapestry-core\src\main\java\org\apache\tapestry5\internal\services\exceptions\ExceptionReportWriterImpl.java-75-    }
+c:\Users\Isidor\projects\CoSec\cosec-ai-main\unpatched\tapestry-5-5.4.3\tapestry-core\src\main\java\org\apache\tapestry5\internal\services\exceptions\ExceptionReportWriterImpl.java-76-
+c:\Users\Isidor\projects\CoSec\cosec-ai-main\unpatched\tapestry-5-5.4.3\tapestry-core\src\main\java\org\apache\tapestry5\internal\services\exceptions\ExceptionReportWriterImpl.java-77-    @Inject
+--
+c:\Users\Isidor\projects\CoSec\cosec-ai-main\unpatched\tapestry-5-5.4.3\tapestry-core\src\main\java\org\apache\tapestry5\internal\services\exceptions\ExceptionReportWriterImpl.java-85-    private String contextPath;
+c:\Users\Isidor\projects\CoSec\cosec-ai-main\unpatched\tapestry-5-5.4.3\tapestry-core\src\main\java\org\apache\tapestry5\internal\services\exceptions\ExceptionReportWriterImpl.java-86-
+c:\Users\Isidor\projects\CoSec\cosec-ai-main\unpatched\tapestry-5-5.4.3\tapestry-core\src\main\java\org\apache\tapestry5\internal\services\exceptions\ExceptionReportWriterImpl.java-87-    @Override
+tapestry-core\src\main\java\org\apache\tapestry5\internal\services\exceptions\ExceptionReportWriterImpl.java:88:    public void writeReport(PrintWriter writer, Throwable exception)
+c:\Users\Isidor\projects\CoSec\cosec-ai-main\unpatched\tapestry-5-5.4.3\tapestry-core\src\main\java\org\apache\tapestry5\internal\services\exceptions\ExceptionReportWriterImpl.java-89-    {
+c:\Users\Isidor\projects\CoSec\cosec-ai-main\unpatched\tapestry-5-5.4.3\tapestry-core\src\main\java\org\apache\tapestry5\internal\services\exceptions\ExceptionReportWriterImpl.java-90-        writeReport(writer, analyzer.analyze(exception));
+c:\Users\Isidor\projects\CoSec\cosec-ai-main\unpatched\tapestry-5-5.4.3\tapestry-core\src\main\java\org\apache\tapestry5\internal\services\exceptions\ExceptionReportWriterImpl.java-91-    }
+c:\Users\Isidor\projects\CoSec\cosec-ai-main\unpatched\tapestry-5-5.4.3\tapestry-core\src\main\java\org\apache\tapestry5\internal\services\exceptions\ExceptionReportWriterImpl.java-92-
+tapestry-core\src\main\java\org\apache\tapestry5\internal\services\exceptions\ExceptionReportWriterImpl.java:93:    private PropertyWriter newPropertyWriter(final PrintWriter writer, Iterable<String> names)
+c:\Users\Isidor\projects\CoSec\cosec-ai-main\unpatched\tapestry-5-5.4.3\tapestry-core\src\main\java\org\apache\tapestry5\internal\services\exceptions\ExceptionReportWriterImpl.java-94-    {
+c:\Users\Isidor\projects\CoSec\cosec-ai-main\unpatched\tapestry-5-5.4.3\tapestry-core\src\main\java\org\apache\tapestry5\internal\services\exceptions\ExceptionReportWriterImpl.java-95-        final int maxPropertyNameLength = F.flow(names).map(STRING_TO_LENGTH).reduce(MAX, 0);
+c:\Users\Isidor\projects\CoSec\cosec-ai-main\unpatched\tapestry-5-5.4.3\tapestry-core\src\main\java\org\apache\tapestry5\internal\services\exceptions\ExceptionReportWriterImpl.java-96-
+--
+c:\Users\Isidor\projects\CoSec\cosec-ai-main\unpatched\tapestry-5-5.4.3\tapestry-core\src\main\java\org\apache\tapestry5\internal\services\exceptions\ExceptionReportWriterImpl.java-100-        {
+c:\Users\Isidor\projects\CoSec\cosec-ai-main\unpatched\tapestry-5-5.4.3\tapestry-core\src\main\java\org\apache\tapestry5\internal\services\exceptions\ExceptionReportWriterImpl.java-101-            @SuppressWarnings("rawtypes")
+c:\Users\Isidor\projects\CoSec\cosec-ai-main\unpatched\tapestry-5-5.4.3\tapestry-core\src\main\java\org\apache\tapestry5\internal\services\exceptions\ExceptionReportWriterImpl.java-102-            @Override
+tapestry-core\src\main\java\org\apache\tapestry5\internal\services\exceptions\ExceptionReportWriterImpl.java:103:            public void write(String name, Object value)
+c:\Users\Isidor\projects\CoSec\cosec-ai-main\unpatched\tapestry-5-5.4.3\tapestry-core\src\main\java\org\apache\tapestry5\internal\services\exceptions\ExceptionReportWriterImpl.java-104-            {
+c:\Users\Isidor\projects\CoSec\cosec-ai-main\unpatched\tapestry-5-5.4.3\tapestry-core\src\main\java\org\apache\tapestry5\internal\services\exceptions\ExceptionReportWriterImpl.java-105-                if (value.getClass().isArray())
+c:\Users\Isidor\projects\CoSec\cosec-ai-main\unpatched\tapestry-5-5.4.3\tapestry-core\src\main\java\org\apache\tapestry5\internal\services\exceptions\ExceptionReportWriterImpl.java-106-                {
+tapestry-core\src\main\java\org\apache\tapestry5\internal\services\exceptions\ExceptionReportWriterImpl.java:107:                    write(name, toList(value));
+c:\Users\Isidor\projects\CoSec\cosec-ai-main\unpatched\tapestry-5-5.4.3\tapestry-core\src\main\java\org\apache\tapestry5\internal\services\exceptions\ExceptionReportWriterImpl.java-108-                    return;
+c:\Users\Isidor\projects\CoSec\cosec-ai-main\unpatched\tapestry-5-5.4.3\tapestry-core\src\main\java\org\apache\tapestry5\internal\services\exceptions\ExceptionReportWriterImpl.java-109-                }
+c:\Users\Isidor\projects\CoSec\cosec-ai-main\unpatched\tapestry-5-5.4.3\tapestry-core\src\main\java\org\apache\tapestry5\internal\services\exceptions\ExceptionReportWriterImpl.java-110-
+--
+c:\Users\Isidor\projects\CoSec\cosec-ai-main\unpatched\tapestry-5-5.4.3\tapestry-core\src\main\java\org\apache\tapestry5\internal\services\exceptions\ExceptionReportWriterImpl.java-122-                        } else
+c:\Users\Isidor\projects\CoSec\cosec-ai-main\unpatched\tapestry-5-5.4.3\tapestry-core\src\main\java\org\apache\tapestry5\internal\services\exceptions\ExceptionReportWriterImpl.java-123-                        {
+c:\Users\Isidor\projects\CoSec\cosec-ai-main\unpatched\tapestry-5-5.4.3\tapestry-core\src\main\java\org\apache\tapestry5\internal\services\exceptions\ExceptionReportWriterImpl.java-124-                            for (int j = 0; j < maxPropertyNameLength + 4; j++)
+tapestry-core\src\main\java\org\apache\tapestry5\internal\services\exceptions\ExceptionReportWriterImpl.java:125:                                writer.write(' ');
+c:\Users\Isidor\projects\CoSec\cosec-ai-main\unpatched\tapestry-5-5.4.3\tapestry-core\src\main\java\org\apache\tapestry5\internal\services\exceptions\ExceptionReportWriterImpl.java-126-
+c:\Users\Isidor\projects\CoSec\cosec-ai-main\unpatched\tapestry-5-5.4.3\tapestry-core\src\main\java\org\apache\tapestry5\internal\services\exceptions\ExceptionReportWriterImpl.java-127-                            writer.println(i.next());
+c:\Users\Isidor\projects\CoSec\cosec-ai-main\unpatched\tapestry-5-5.4.3\tapestry-core\src\main\java\org\apache\tapestry5\internal\services\exceptions\ExceptionReportWriterImpl.java-128-                        }
+--
+c:\Users\Isidor\projects\CoSec\cosec-ai-main\unpatched\tapestry-5-5.4.3\tapestry-core\src\main\java\org\apache\tapestry5\internal\services\exceptions\ExceptionReportWriterImpl.java-148-    }
+c:\Users\Isidor\projects\CoSec\cosec-ai-main\unpatched\tapestry-5-5.4.3\tapestry-core\src\main\java\org\apache\tapestry5\internal\services\exceptions\ExceptionReportWriterImpl.java-149-
+c:\Users\Isidor\projects\CoSec\cosec-ai-main\unpatched\tapestry-5-5.4.3\tapestry-core\src\main\java\org\apache\tapestry5\internal\services\exceptions\ExceptionReportWriterImpl.java-150-    @Override
+tapestry-core\src\main\java\org\apache\tapestry5\internal\services\exceptions\ExceptionReportWriterImpl.java:151:    public void writeReport(final PrintWriter writer, ExceptionAnalysis analysis)
+c:\Users\Isidor\projects\CoSec\cosec-ai-main\unpatched\tapestry-5-5.4.3\tapestry-core\src\main\java\org\apache\tapestry5\internal\services\exceptions\ExceptionReportWriterImpl.java-152-    {
+tapestry-core\src\main\java\org\apache\tapestry5\internal\services\exceptions\ExceptionReportWriterImpl.java-153-        writer.printf("EXCEPTION STACK:%n%n");
+c:\Users\Isidor\projects\CoSec\cosec-ai-main\unpatched\tapestry-5-5.4.3\tapestry-core\src\main\java\org\apache\tapestry5\internal\services\exceptions\ExceptionReportWriterImpl.java-154-
+--
+c:\Users\Isidor\projects\CoSec\cosec-ai-main\unpatched\tapestry-5-5.4.3\tapestry-core\src\main\java\org\apache\tapestry5\internal\services\exceptions\ExceptionReportWriterImpl.java-169-                first = false;
+c:\Users\Isidor\projects\CoSec\cosec-ai-main\unpatched\tapestry-5-5.4.3\tapestry-core\src\main\java\org\apache\tapestry5\internal\services\exceptions\ExceptionReportWriterImpl.java-170-            }
+c:\Users\Isidor\projects\CoSec\cosec-ai-main\unpatched\tapestry-5-5.4.3\tapestry-core\src\main\java\org\apache\tapestry5\internal\services\exceptions\ExceptionReportWriterImpl.java-171-
+tapestry-core\src\main\java\org\apache\tapestry5\internal\services\exceptions\ExceptionReportWriterImpl.java:172:            pw.write("Exception", info.getClassName());
+tapestry-core\src\main\java\org\apache\tapestry5\internal\services\exceptions\ExceptionReportWriterImpl.java:173:            pw.write("Message", info.getMessage());
+c:\Users\Isidor\projects\CoSec\cosec-ai-main\unpatched\tapestry-5-5.4.3\tapestry-core\src\main\java\org\apache\tapestry5\internal\services\exceptions\ExceptionReportWriterImpl.java-174-
+tapestry-core\src\main\java\org\apache\tapestry5\internal\services\exceptions\ExceptionReportWriterImpl.java-175-            for (String name : info.getPropertyNames())
+c:\Users\Isidor\projects\CoSec\cosec-ai-main\unpatched\tapestry-5-5.4.3\tapestry-core\src\main\java\org\apache\tapestry5\internal\services\exceptions\ExceptionReportWriterImpl.java-176-            {
+tapestry-core\src\main\java\org\apache\tapestry5\internal\services\exceptions\ExceptionReportWriterImpl.java:177:                pw.write(name, info.getProperty(name));
+c:\Users\Isidor\projects\CoSec\cosec-ai-main\unpatched\tapestry-5-5.4.3\tapestry-core\src\main\java\org\apache\tapestry5\internal\services\exceptions\ExceptionReportWriterImpl.java-178-            }
+c:\Users\Isidor\projects\CoSec\cosec-ai-main\unpatched\tapestry-5-5.4.3\tapestry-core\src\main\java\org\apache\tapestry5\internal\services\exceptions\ExceptionReportWriterImpl.java-179-            if (!info.getStackTrace().isEmpty())
+c:\Users\Isidor\projects\CoSec\cosec-ai-main\unpatched\tapestry-5-5.4.3\tapestry-core\src\main\java\org\apache\tapestry5\internal\services\exceptions\ExceptionReportWriterImpl.java-180-            {
+--
+c:\Users\Isidor\projects\CoSec\cosec-ai-main\unpatched\tapestry-5-5.4.3\tapestry-core\src\main\java\org\apache\tapestry5\internal\services\exceptions\ExceptionReportWriterImpl.java-214-            {
+c:\Users\Isidor\projects\CoSec\cosec-ai-main\unpatched\tapestry-5-5.4.3\tapestry-core\src\main\java\org\apache\tapestry5\internal\services\exceptions\ExceptionReportWriterImpl.java-215-                flags.add("secure");
+c:\Users\Isidor\projects\CoSec\cosec-ai-main\unpatched\tapestry-5-5.4.3\tapestry-core\src\main\java\org\apache\tapestry5\internal\services\exceptions\ExceptionReportWriterImpl.java-216-            }
+tapestry-core\src\main\java\org\apache\tapestry5\internal\services\exceptions\ExceptionReportWriterImpl.java:217:            pw.write("contextPath", contextPath);
+c:\Users\Isidor\projects\CoSec\cosec-ai-main\unpatched\tapestry-5-5.4.3\tapestry-core\src\main\java\org\apache\tapestry5\internal\services\exceptions\ExceptionReportWriterImpl.java-218-
+c:\Users\Isidor\projects\CoSec\cosec-ai-main\unpatched\tapestry-5-5.4.3\tapestry-core\src\main\java\org\apache\tapestry5\internal\services\exceptions\ExceptionReportWriterImpl.java-219-            if (!flags.isEmpty())
+c:\Users\Isidor\projects\CoSec\cosec-ai-main\unpatched\tapestry-5-5.4.3\tapestry-core\src\main\java\org\apache\tapestry5\internal\services\exceptions\ExceptionReportWriterImpl.java-220-            {
+tapestry-core\src\main\java\org\apache\tapestry5\internal\services\exceptions\ExceptionReportWriterImpl.java:221:                pw.write("flags", InternalUtils.joinSorted(flags));
+c:\Users\Isidor\projects\CoSec\cosec-ai-main\unpatched\tapestry-5-5.4.3\tapestry-core\src\main\java\org\apache\tapestry5\internal\services\exceptions\ExceptionReportWriterImpl.java-222-            }
+tapestry-core\src\main\java\org\apache\tapestry5\internal\services\exceptions\ExceptionReportWriterImpl.java:223:            pw.write("method", request.getMethod());
+tapestry-core\src\main\java\org\apache\tapestry5\internal\services\exceptions\ExceptionReportWriterImpl.java:224:            pw.write("path", request.getPath());
+tapestry-core\src\main\java\org\apache\tapestry5\internal\services\exceptions\ExceptionReportWriterImpl.java:225:            pw.write("locale", request.getLocale());
+tapestry-core\src\main\java\org\apache\tapestry5\internal\services\exceptions\ExceptionReportWriterImpl.java:226:            pw.write("serverName", request.getServerName());
+tapestry-core\src\main\java\org\apache\tapestry5\internal\services\exceptions\ExceptionReportWriterImpl.java:227:            pw.write("remoteHost", request.getRemoteHost());
+c:\Users\Isidor\projects\CoSec\cosec-ai-main\unpatched\tapestry-5-5.4.3\tapestry-core\src\main\java\org\apache\tapestry5\internal\services\exceptions\ExceptionReportWriterImpl.java-228-
+tapestry-core\src\main\java\org\apache\tapestry5\internal\services\exceptions\ExceptionReportWriterImpl.java-229-            writer.printf("%nHeaders:%n%n");
+c:\Users\Isidor\projects\CoSec\cosec-ai-main\unpatched\tapestry-5-5.4.3\tapestry-core\src\main\java\org\apache\tapestry5\internal\services\exceptions\ExceptionReportWriterImpl.java-230-
+tapestry-core\src\main\java\org\apache\tapestry5\internal\services\exceptions\ExceptionReportWriterImpl.java-231-            for (String name : request.getHeaderNames())
+c:\Users\Isidor\projects\CoSec\cosec-ai-main\unpatched\tapestry-5-5.4.3\tapestry-core\src\main\java\org\apache\tapestry5\internal\services\exceptions\ExceptionReportWriterImpl.java-232-            {
+tapestry-core\src\main\java\org\apache\tapestry5\internal\services\exceptions\ExceptionReportWriterImpl.java:233:                pw.write(name, request.getHeader(name));
+c:\Users\Isidor\projects\CoSec\cosec-ai-main\unpatched\tapestry-5-5.4.3\tapestry-core\src\main\java\org\apache\tapestry5\internal\services\exceptions\ExceptionReportWriterImpl.java-234-            }
+c:\Users\Isidor\projects\CoSec\cosec-ai-main\unpatched\tapestry-5-5.4.3\tapestry-core\src\main\java\org\apache\tapestry5\internal\services\exceptions\ExceptionReportWriterImpl.java-235-            if (!request.getParameterNames().isEmpty())
+c:\Users\Isidor\projects\CoSec\cosec-ai-main\unpatched\tapestry-5-5.4.3\tapestry-core\src\main\java\org\apache\tapestry5\internal\services\exceptions\ExceptionReportWriterImpl.java-236-            {
+--
+tapestry-core\src\main\java\org\apache\tapestry5\internal\services\exceptions\ExceptionReportWriterImpl.java-238-                for (String name : request.getParameterNames())
+c:\Users\Isidor\projects\CoSec\cosec-ai-main\unpatched\tapestry-5-5.4.3\tapestry-core\src\main\java\org\apache\tapestry5\internal\services\exceptions\ExceptionReportWriterImpl.java-239-                {
+tapestry-core\src\main\java\org\apache\tapestry5\internal\services\exceptions\ExceptionReportWriterImpl.java-240-                    \ TODO: Support multi-value parameters
+tapestry-core\src\main\java\org\apache\tapestry5\internal\services\exceptions\ExceptionReportWriterImpl.java:241:                    pw.write(name, request.getParameters(name));
+c:\Users\Isidor\projects\CoSec\cosec-ai-main\unpatched\tapestry-5-5.4.3\tapestry-core\src\main\java\org\apache\tapestry5\internal\services\exceptions\ExceptionReportWriterImpl.java-242-                }
+c:\Users\Isidor\projects\CoSec\cosec-ai-main\unpatched\tapestry-5-5.4.3\tapestry-core\src\main\java\org\apache\tapestry5\internal\services\exceptions\ExceptionReportWriterImpl.java-243-            }
+c:\Users\Isidor\projects\CoSec\cosec-ai-main\unpatched\tapestry-5-5.4.3\tapestry-core\src\main\java\org\apache\tapestry5\internal\services\exceptions\ExceptionReportWriterImpl.java-244-
+--
+c:\Users\Isidor\projects\CoSec\cosec-ai-main\unpatched\tapestry-5-5.4.3\tapestry-core\src\main\java\org\apache\tapestry5\internal\services\exceptions\ExceptionReportWriterImpl.java-252-
+tapestry-core\src\main\java\org\apache\tapestry5\internal\services\exceptions\ExceptionReportWriterImpl.java-253-                for (String name : session.getAttributeNames())
+c:\Users\Isidor\projects\CoSec\cosec-ai-main\unpatched\tapestry-5-5.4.3\tapestry-core\src\main\java\org\apache\tapestry5\internal\services\exceptions\ExceptionReportWriterImpl.java-254-                {
+tapestry-core\src\main\java\org\apache\tapestry5\internal\services\exceptions\ExceptionReportWriterImpl.java:255:                    pw.write(name, session.getAttribute(name));
+c:\Users\Isidor\projects\CoSec\cosec-ai-main\unpatched\tapestry-5-5.4.3\tapestry-core\src\main\java\org\apache\tapestry5\internal\services\exceptions\ExceptionReportWriterImpl.java-256-                }
+c:\Users\Isidor\projects\CoSec\cosec-ai-main\unpatched\tapestry-5-5.4.3\tapestry-core\src\main\java\org\apache\tapestry5\internal\services\exceptions\ExceptionReportWriterImpl.java-257-            }
+c:\Users\Isidor\projects\CoSec\cosec-ai-main\unpatched\tapestry-5-5.4.3\tapestry-core\src\main\java\org\apache\tapestry5\internal\services\exceptions\ExceptionReportWriterImpl.java-258-        }
+--
+c:\Users\Isidor\projects\CoSec\cosec-ai-main\unpatched\tapestry-5-5.4.3\tapestry-core\src\main\java\org\apache\tapestry5\internal\services\exceptions\ExceptionReportWriterImpl.java-288-
+c:\Users\Isidor\projects\CoSec\cosec-ai-main\unpatched\tapestry-5-5.4.3\tapestry-core\src\main\java\org\apache\tapestry5\internal\services\exceptions\ExceptionReportWriterImpl.java-289-            if (t.isDaemon())
+c:\Users\Isidor\projects\CoSec\cosec-ai-main\unpatched\tapestry-5-5.4.3\tapestry-core\src\main\java\org\apache\tapestry5\internal\services\exceptions\ExceptionReportWriterImpl.java-290-            {
+tapestry-core\src\main\java\org\apache\tapestry5\internal\services\exceptions\ExceptionReportWriterImpl.java:291:                writer.write(", daemon");
+c:\Users\Isidor\projects\CoSec\cosec-ai-main\unpatched\tapestry-5-5.4.3\tapestry-core\src\main\java\org\apache\tapestry5\internal\services\exceptions\ExceptionReportWriterImpl.java-292-            }
+c:\Users\Isidor\projects\CoSec\cosec-ai-main\unpatched\tapestry-5-5.4.3\tapestry-core\src\main\java\org\apache\tapestry5\internal\services\exceptions\ExceptionReportWriterImpl.java-293-
+c:\Users\Isidor\projects\CoSec\cosec-ai-main\unpatched\tapestry-5-5.4.3\tapestry-core\src\main\java\org\apache\tapestry5\internal\services\exceptions\ExceptionReportWriterImpl.java-294-            if (!t.isAlive())
+c:\Users\Isidor\projects\CoSec\cosec-ai-main\unpatched\tapestry-5-5.4.3\tapestry-core\src\main\java\org\apache\tapestry5\internal\services\exceptions\ExceptionReportWriterImpl.java-295-            {
+tapestry-core\src\main\java\org\apache\tapestry5\internal\services\exceptions\ExceptionReportWriterImpl.java:296:                writer.write(", NOT alive");
+c:\Users\Isidor\projects\CoSec\cosec-ai-main\unpatched\tapestry-5-5.4.3\tapestry-core\src\main\java\org\apache\tapestry5\internal\services\exceptions\ExceptionReportWriterImpl.java-297-            }
+c:\Users\Isidor\projects\CoSec\cosec-ai-main\unpatched\tapestry-5-5.4.3\tapestry-core\src\main\java\org\apache\tapestry5\internal\services\exceptions\ExceptionReportWriterImpl.java-298-
+c:\Users\Isidor\projects\CoSec\cosec-ai-main\unpatched\tapestry-5-5.4.3\tapestry-core\src\main\java\org\apache\tapestry5\internal\services\exceptions\ExceptionReportWriterImpl.java-299-            if (t.isInterrupted())
+c:\Users\Isidor\projects\CoSec\cosec-ai-main\unpatched\tapestry-5-5.4.3\tapestry-core\src\main\java\org\apache\tapestry5\internal\services\exceptions\ExceptionReportWriterImpl.java-300-            {
+tapestry-core\src\main\java\org\apache\tapestry5\internal\services\exceptions\ExceptionReportWriterImpl.java:301:                writer.write(", interrupted");
+c:\Users\Isidor\projects\CoSec\cosec-ai-main\unpatched\tapestry-5-5.4.3\tapestry-core\src\main\java\org\apache\tapestry5\internal\services\exceptions\ExceptionReportWriterImpl.java-302-            }
+c:\Users\Isidor\projects\CoSec\cosec-ai-main\unpatched\tapestry-5-5.4.3\tapestry-core\src\main\java\org\apache\tapestry5\internal\services\exceptions\ExceptionReportWriterImpl.java-303-
+c:\Users\Isidor\projects\CoSec\cosec-ai-main\unpatched\tapestry-5-5.4.3\tapestry-core\src\main\java\org\apache\tapestry5\internal\services\exceptions\ExceptionReportWriterImpl.java-304-            if (t.getPriority() != Thread.NORM_PRIORITY)

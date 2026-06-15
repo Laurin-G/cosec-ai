@@ -1,0 +1,252 @@
+c:\Users\Isidor\projects\CoSec\cosec-ai-main\unpatched\tapestry-5-5.4.3\tapestry-javadoc\src\main\java\org\apache\tapestry5\javadoc\XDocStreamer.java-80-        ParserState state = ParserState.IGNORING;
+c:\Users\Isidor\projects\CoSec\cosec-ai-main\unpatched\tapestry-5-5.4.3\tapestry-javadoc\src\main\java\org\apache\tapestry5\javadoc\XDocStreamer.java-81-
+c:\Users\Isidor\projects\CoSec\cosec-ai-main\unpatched\tapestry-5-5.4.3\tapestry-javadoc\src\main\java\org\apache\tapestry5\javadoc\XDocStreamer.java-82-        @Override
+tapestry-javadoc\src\main\java\org\apache\tapestry5\javadoc\XDocStreamer.java:83:        public void startDTD(String name, String publicId, String systemId) throws SAXException
+c:\Users\Isidor\projects\CoSec\cosec-ai-main\unpatched\tapestry-5-5.4.3\tapestry-javadoc\src\main\java\org\apache\tapestry5\javadoc\XDocStreamer.java-84-        {
+c:\Users\Isidor\projects\CoSec\cosec-ai-main\unpatched\tapestry-5-5.4.3\tapestry-javadoc\src\main\java\org\apache\tapestry5\javadoc\XDocStreamer.java-85-        }
+c:\Users\Isidor\projects\CoSec\cosec-ai-main\unpatched\tapestry-5-5.4.3\tapestry-javadoc\src\main\java\org\apache\tapestry5\javadoc\XDocStreamer.java-86-
+c:\Users\Isidor\projects\CoSec\cosec-ai-main\unpatched\tapestry-5-5.4.3\tapestry-javadoc\src\main\java\org\apache\tapestry5\javadoc\XDocStreamer.java-87-        @Override
+tapestry-javadoc\src\main\java\org\apache\tapestry5\javadoc\XDocStreamer.java:88:        public void endDTD() throws SAXException
+c:\Users\Isidor\projects\CoSec\cosec-ai-main\unpatched\tapestry-5-5.4.3\tapestry-javadoc\src\main\java\org\apache\tapestry5\javadoc\XDocStreamer.java-89-        {
+c:\Users\Isidor\projects\CoSec\cosec-ai-main\unpatched\tapestry-5-5.4.3\tapestry-javadoc\src\main\java\org\apache\tapestry5\javadoc\XDocStreamer.java-90-        }
+c:\Users\Isidor\projects\CoSec\cosec-ai-main\unpatched\tapestry-5-5.4.3\tapestry-javadoc\src\main\java\org\apache\tapestry5\javadoc\XDocStreamer.java-91-
+--
+c:\Users\Isidor\projects\CoSec\cosec-ai-main\unpatched\tapestry-5-5.4.3\tapestry-core\src\test\java\org\apache\tapestry5\dom\DOMTest.java-426-        Element root = d.newRootElement("prime");
+c:\Users\Isidor\projects\CoSec\cosec-ai-main\unpatched\tapestry-5-5.4.3\tapestry-core\src\test\java\org\apache\tapestry5\dom\DOMTest.java-427-        root.element("slag");
+c:\Users\Isidor\projects\CoSec\cosec-ai-main\unpatched\tapestry-5-5.4.3\tapestry-core\src\test\java\org\apache\tapestry5\dom\DOMTest.java-428-        d.dtd("prime", "-//TF", "tf");
+tapestry-core\src\test\java\org\apache\tapestry5\dom\DOMTest.java:429:        String expected = "<?xml version=\"1.0\"?>\n<!DOCTYPE prime PUBLIC \"-//TF\" \"tf\"><prime><slag/></prime>";
+c:\Users\Isidor\projects\CoSec\cosec-ai-main\unpatched\tapestry-5-5.4.3\tapestry-core\src\test\java\org\apache\tapestry5\dom\DOMTest.java-430-        assertEquals(d.toString(), expected);
+c:\Users\Isidor\projects\CoSec\cosec-ai-main\unpatched\tapestry-5-5.4.3\tapestry-core\src\test\java\org\apache\tapestry5\dom\DOMTest.java-431-    }
+c:\Users\Isidor\projects\CoSec\cosec-ai-main\unpatched\tapestry-5-5.4.3\tapestry-core\src\test\java\org\apache\tapestry5\dom\DOMTest.java-432-
+--
+c:\Users\Isidor\projects\CoSec\cosec-ai-main\unpatched\tapestry-5-5.4.3\tapestry-core\src\test\java\org\apache\tapestry5\dom\DOMTest.java-436-        Document d = new Document(new XMLMarkupModel());
+c:\Users\Isidor\projects\CoSec\cosec-ai-main\unpatched\tapestry-5-5.4.3\tapestry-core\src\test\java\org\apache\tapestry5\dom\DOMTest.java-437-        d.newRootElement("prime");
+c:\Users\Isidor\projects\CoSec\cosec-ai-main\unpatched\tapestry-5-5.4.3\tapestry-core\src\test\java\org\apache\tapestry5\dom\DOMTest.java-438-        d.dtd("prime", null, null);
+tapestry-core\src\test\java\org\apache\tapestry5\dom\DOMTest.java:439:        assertEquals(d.toString(), "<?xml version=\"1.0\"?>\n<!DOCTYPE prime><prime/>");
+c:\Users\Isidor\projects\CoSec\cosec-ai-main\unpatched\tapestry-5-5.4.3\tapestry-core\src\test\java\org\apache\tapestry5\dom\DOMTest.java-440-        d.dtd("prime", "-//TF", null);
+tapestry-core\src\test\java\org\apache\tapestry5\dom\DOMTest.java:441:        assertEquals(d.toString(), "<?xml version=\"1.0\"?>\n<!DOCTYPE prime PUBLIC \"-//TF\"><prime/>");
+c:\Users\Isidor\projects\CoSec\cosec-ai-main\unpatched\tapestry-5-5.4.3\tapestry-core\src\test\java\org\apache\tapestry5\dom\DOMTest.java-442-
+c:\Users\Isidor\projects\CoSec\cosec-ai-main\unpatched\tapestry-5-5.4.3\tapestry-core\src\test\java\org\apache\tapestry5\dom\DOMTest.java-443-        d.dtd("prime", null, "tf");
+tapestry-core\src\test\java\org\apache\tapestry5\dom\DOMTest.java:444:        assertEquals(d.toString(), "<?xml version=\"1.0\"?>\n<!DOCTYPE prime SYSTEM \"tf\"><prime/>");
+c:\Users\Isidor\projects\CoSec\cosec-ai-main\unpatched\tapestry-5-5.4.3\tapestry-core\src\test\java\org\apache\tapestry5\dom\DOMTest.java-445-    }
+c:\Users\Isidor\projects\CoSec\cosec-ai-main\unpatched\tapestry-5-5.4.3\tapestry-core\src\test\java\org\apache\tapestry5\dom\DOMTest.java-446-
+c:\Users\Isidor\projects\CoSec\cosec-ai-main\unpatched\tapestry-5-5.4.3\tapestry-core\src\test\java\org\apache\tapestry5\dom\DOMTest.java-447-    @Test
+--
+c:\Users\Isidor\projects\CoSec\cosec-ai-main\unpatched\tapestry-5-5.4.3\tapestry-core\src\test\java\org\apache\tapestry5\integration\pagelevel\DTDTest.java-20-import org.testng.annotations.DataProvider;
+c:\Users\Isidor\projects\CoSec\cosec-ai-main\unpatched\tapestry-5-5.4.3\tapestry-core\src\test\java\org\apache\tapestry5\integration\pagelevel\DTDTest.java-21-import org.testng.annotations.Test;
+c:\Users\Isidor\projects\CoSec\cosec-ai-main\unpatched\tapestry-5-5.4.3\tapestry-core\src\test\java\org\apache\tapestry5\integration\pagelevel\DTDTest.java-22-
+tapestry-core\src\test\java\org\apache\tapestry5\integration\pagelevel\DTDTest.java:23:public class DTDTest extends Assert
+c:\Users\Isidor\projects\CoSec\cosec-ai-main\unpatched\tapestry-5-5.4.3\tapestry-core\src\test\java\org\apache\tapestry5\integration\pagelevel\DTDTest.java-24-{
+tapestry-core\src\test\java\org\apache\tapestry5\integration\pagelevel\DTDTest.java:25:    private static final String FRAMESET = "<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Frameset//EN\" \"http://www.w3.org/TR/xhtml1/DTD/xhtml1-frameset.dtd\">";
+c:\Users\Isidor\projects\CoSec\cosec-ai-main\unpatched\tapestry-5-5.4.3\tapestry-core\src\test\java\org\apache\tapestry5\integration\pagelevel\DTDTest.java-26-
+tapestry-core\src\test\java\org\apache\tapestry5\integration\pagelevel\DTDTest.java:27:    private static final String TRANSITIONAL = "<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Transitional//EN\" \"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd\">";
+c:\Users\Isidor\projects\CoSec\cosec-ai-main\unpatched\tapestry-5-5.4.3\tapestry-core\src\test\java\org\apache\tapestry5\integration\pagelevel\DTDTest.java-28-
+tapestry-core\src\test\java\org\apache\tapestry5\integration\pagelevel\DTDTest.java:29:    private static final String STRICT = "<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Strict//EN\" \"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd\">";
+c:\Users\Isidor\projects\CoSec\cosec-ai-main\unpatched\tapestry-5-5.4.3\tapestry-core\src\test\java\org\apache\tapestry5\integration\pagelevel\DTDTest.java-30-
+c:\Users\Isidor\projects\CoSec\cosec-ai-main\unpatched\tapestry-5-5.4.3\tapestry-core\src\test\java\org\apache\tapestry5\integration\pagelevel\DTDTest.java-31-    @DataProvider
+c:\Users\Isidor\projects\CoSec\cosec-ai-main\unpatched\tapestry-5-5.4.3\tapestry-core\src\test\java\org\apache\tapestry5\integration\pagelevel\DTDTest.java-32-    public Object[][] dtd_page_provider()
+c:\Users\Isidor\projects\CoSec\cosec-ai-main\unpatched\tapestry-5-5.4.3\tapestry-core\src\test\java\org\apache\tapestry5\integration\pagelevel\DTDTest.java-33-    {
+c:\Users\Isidor\projects\CoSec\cosec-ai-main\unpatched\tapestry-5-5.4.3\tapestry-core\src\test\java\org\apache\tapestry5\integration\pagelevel\DTDTest.java-34-        return new Object[][]
+c:\Users\Isidor\projects\CoSec\cosec-ai-main\unpatched\tapestry-5-5.4.3\tapestry-core\src\test\java\org\apache\tapestry5\integration\pagelevel\DTDTest.java-35-                {
+tapestry-core\src\test\java\org\apache\tapestry5\integration\pagelevel\DTDTest.java:36:                        { "DTDFromPage", FRAMESET, "slagheap", },
+tapestry-core\src\test\java\org\apache\tapestry5\integration\pagelevel\DTDTest.java:37:                        { "DTDFromComponent", TRANSITIONAL, "flubber", },
+tapestry-core\src\test\java\org\apache\tapestry5\integration\pagelevel\DTDTest.java:38:                        { "MultipleDTD", STRICT, "blubber", },
+tapestry-core\src\test\java\org\apache\tapestry5\integration\pagelevel\DTDTest.java:39:                        { "NoDTD", "", "no_dtd_loser", } };
+c:\Users\Isidor\projects\CoSec\cosec-ai-main\unpatched\tapestry-5-5.4.3\tapestry-core\src\test\java\org\apache\tapestry5\integration\pagelevel\DTDTest.java-40-    }
+c:\Users\Isidor\projects\CoSec\cosec-ai-main\unpatched\tapestry-5-5.4.3\tapestry-core\src\test\java\org\apache\tapestry5\integration\pagelevel\DTDTest.java-41-
+c:\Users\Isidor\projects\CoSec\cosec-ai-main\unpatched\tapestry-5-5.4.3\tapestry-core\src\test\java\org\apache\tapestry5\integration\pagelevel\DTDTest.java-42-    @Test(dataProvider = "dtd_page_provider")
+tapestry-core\src\test\java\org\apache\tapestry5\integration\pagelevel\DTDTest.java:43:    public void verify_correct_dtds(String pageName, String expectedDTD, String checkText)
+c:\Users\Isidor\projects\CoSec\cosec-ai-main\unpatched\tapestry-5-5.4.3\tapestry-core\src\test\java\org\apache\tapestry5\integration\pagelevel\DTDTest.java-44-    {
+c:\Users\Isidor\projects\CoSec\cosec-ai-main\unpatched\tapestry-5-5.4.3\tapestry-core\src\test\java\org\apache\tapestry5\integration\pagelevel\DTDTest.java-45-        PageTester tester = new PageTester(TestConstants.APP2_PACKAGE, TestConstants.APP2_NAME);
+c:\Users\Isidor\projects\CoSec\cosec-ai-main\unpatched\tapestry-5-5.4.3\tapestry-core\src\test\java\org\apache\tapestry5\integration\pagelevel\DTDTest.java-46-
+c:\Users\Isidor\projects\CoSec\cosec-ai-main\unpatched\tapestry-5-5.4.3\tapestry-core\src\test\java\org\apache\tapestry5\integration\pagelevel\DTDTest.java-47-        Document doc = tester.renderPage(pageName);
+c:\Users\Isidor\projects\CoSec\cosec-ai-main\unpatched\tapestry-5-5.4.3\tapestry-core\src\test\java\org\apache\tapestry5\integration\pagelevel\DTDTest.java-48-        String txt = doc.toString();
+tapestry-core\src\test\java\org\apache\tapestry5\integration\pagelevel\DTDTest.java:49:        // use startsWith to make sure the DTD is getting into the right spot.
+tapestry-core\src\test\java\org\apache\tapestry5\integration\pagelevel\DTDTest.java:50:        assertTrue(txt.startsWith(expectedDTD));
+tapestry-core\src\test\java\org\apache\tapestry5\integration\pagelevel\DTDTest.java:51:        // we should also make sure that the other DTD's don't appear anywhere else...
+tapestry-core\src\test\java\org\apache\tapestry5\integration\pagelevel\DTDTest.java:52:        checkOtherDTD(txt, expectedDTD);
+c:\Users\Isidor\projects\CoSec\cosec-ai-main\unpatched\tapestry-5-5.4.3\tapestry-core\src\test\java\org\apache\tapestry5\integration\pagelevel\DTDTest.java-53-        // spot check the body of the pages to make sure they correctly rendered...
+c:\Users\Isidor\projects\CoSec\cosec-ai-main\unpatched\tapestry-5-5.4.3\tapestry-core\src\test\java\org\apache\tapestry5\integration\pagelevel\DTDTest.java-54-        // they should have, based on the unit tests for template rendering, but...
+c:\Users\Isidor\projects\CoSec\cosec-ai-main\unpatched\tapestry-5-5.4.3\tapestry-core\src\test\java\org\apache\tapestry5\integration\pagelevel\DTDTest.java-55-        assertTrue(txt.contains(checkText));
+c:\Users\Isidor\projects\CoSec\cosec-ai-main\unpatched\tapestry-5-5.4.3\tapestry-core\src\test\java\org\apache\tapestry5\integration\pagelevel\DTDTest.java-56-
+c:\Users\Isidor\projects\CoSec\cosec-ai-main\unpatched\tapestry-5-5.4.3\tapestry-core\src\test\java\org\apache\tapestry5\integration\pagelevel\DTDTest.java-57-    }
+c:\Users\Isidor\projects\CoSec\cosec-ai-main\unpatched\tapestry-5-5.4.3\tapestry-core\src\test\java\org\apache\tapestry5\integration\pagelevel\DTDTest.java-58-
+tapestry-core\src\test\java\org\apache\tapestry5\integration\pagelevel\DTDTest.java:59:    private void checkOtherDTD(String txt, String expected)
+c:\Users\Isidor\projects\CoSec\cosec-ai-main\unpatched\tapestry-5-5.4.3\tapestry-core\src\test\java\org\apache\tapestry5\integration\pagelevel\DTDTest.java-60-    {
+c:\Users\Isidor\projects\CoSec\cosec-ai-main\unpatched\tapestry-5-5.4.3\tapestry-core\src\test\java\org\apache\tapestry5\integration\pagelevel\DTDTest.java-61-        if (expected.equals(TRANSITIONAL))
+c:\Users\Isidor\projects\CoSec\cosec-ai-main\unpatched\tapestry-5-5.4.3\tapestry-core\src\test\java\org\apache\tapestry5\integration\pagelevel\DTDTest.java-62-        {
+--
+c:\Users\Isidor\projects\CoSec\cosec-ai-main\unpatched\tapestry-5-5.4.3\tapestry-core\src\main\java\org\apache\tapestry5\dom\MarkupModel.java-18- * Used by a the DOM to determine how to produce markup. Delegates details about converted entities and some formatting
+c:\Users\Isidor\projects\CoSec\cosec-ai-main\unpatched\tapestry-5-5.4.3\tapestry-core\src\main\java\org\apache\tapestry5\dom\MarkupModel.java-19- * details.  This exists to handle the differences between traditional HTML output (which is SGML based, meaning there
+c:\Users\Isidor\projects\CoSec\cosec-ai-main\unpatched\tapestry-5-5.4.3\tapestry-core\src\main\java\org\apache\tapestry5\dom\MarkupModel.java-20- * can be elements that are valid without a close tag) and "modern" XML, such as XHTML.  Generally speaking, for XHTML
+tapestry-core\src\main\java\org\apache\tapestry5\dom\MarkupModel.java:21: * it is vital that a !DOCTYPE be included in the rendered response, or the browser will be unable to display the result
+c:\Users\Isidor\projects\CoSec\cosec-ai-main\unpatched\tapestry-5-5.4.3\tapestry-core\src\main\java\org\apache\tapestry5\dom\MarkupModel.java-22- * properly.
+c:\Users\Isidor\projects\CoSec\cosec-ai-main\unpatched\tapestry-5-5.4.3\tapestry-core\src\main\java\org\apache\tapestry5\dom\MarkupModel.java-23- */
+c:\Users\Isidor\projects\CoSec\cosec-ai-main\unpatched\tapestry-5-5.4.3\tapestry-core\src\main\java\org\apache\tapestry5\dom\MarkupModel.java-24-public interface MarkupModel
+--
+c:\Users\Isidor\projects\CoSec\cosec-ai-main\unpatched\tapestry-5-5.4.3\tapestry-core\src\main\java\org\apache\tapestry5\dom\DTD.java-22- * Representation of a document type. Note that technically, a Doctype isn't a node in an xml document; hence this
+c:\Users\Isidor\projects\CoSec\cosec-ai-main\unpatched\tapestry-5-5.4.3\tapestry-core\src\main\java\org\apache\tapestry5\dom\DTD.java-23- * doesn't extend node.
+c:\Users\Isidor\projects\CoSec\cosec-ai-main\unpatched\tapestry-5-5.4.3\tapestry-core\src\main\java\org\apache\tapestry5\dom\DTD.java-24- */
+tapestry-core\src\main\java\org\apache\tapestry5\dom\DTD.java:25:public class DTD
+c:\Users\Isidor\projects\CoSec\cosec-ai-main\unpatched\tapestry-5-5.4.3\tapestry-core\src\main\java\org\apache\tapestry5\dom\DTD.java-26-{
+c:\Users\Isidor\projects\CoSec\cosec-ai-main\unpatched\tapestry-5-5.4.3\tapestry-core\src\main\java\org\apache\tapestry5\dom\DTD.java-27-    private final String name;
+c:\Users\Isidor\projects\CoSec\cosec-ai-main\unpatched\tapestry-5-5.4.3\tapestry-core\src\main\java\org\apache\tapestry5\dom\DTD.java-28-
+--
+c:\Users\Isidor\projects\CoSec\cosec-ai-main\unpatched\tapestry-5-5.4.3\tapestry-core\src\main\java\org\apache\tapestry5\dom\DTD.java-30-
+c:\Users\Isidor\projects\CoSec\cosec-ai-main\unpatched\tapestry-5-5.4.3\tapestry-core\src\main\java\org\apache\tapestry5\dom\DTD.java-31-    private final String systemId;
+c:\Users\Isidor\projects\CoSec\cosec-ai-main\unpatched\tapestry-5-5.4.3\tapestry-core\src\main\java\org\apache\tapestry5\dom\DTD.java-32-
+tapestry-core\src\main\java\org\apache\tapestry5\dom\DTD.java:33:    public DTD(String name, String publicId, String systemId)
+c:\Users\Isidor\projects\CoSec\cosec-ai-main\unpatched\tapestry-5-5.4.3\tapestry-core\src\main\java\org\apache\tapestry5\dom\DTD.java-34-    {
+c:\Users\Isidor\projects\CoSec\cosec-ai-main\unpatched\tapestry-5-5.4.3\tapestry-core\src\main\java\org\apache\tapestry5\dom\DTD.java-35-        assert InternalUtils.isNonBlank(name);
+c:\Users\Isidor\projects\CoSec\cosec-ai-main\unpatched\tapestry-5-5.4.3\tapestry-core\src\main\java\org\apache\tapestry5\dom\DTD.java-36-
+--
+c:\Users\Isidor\projects\CoSec\cosec-ai-main\unpatched\tapestry-5-5.4.3\tapestry-core\src\main\java\org\apache\tapestry5\dom\DTD.java-45-        {
+c:\Users\Isidor\projects\CoSec\cosec-ai-main\unpatched\tapestry-5-5.4.3\tapestry-core\src\main\java\org\apache\tapestry5\dom\DTD.java-46-            if (systemId != null)
+c:\Users\Isidor\projects\CoSec\cosec-ai-main\unpatched\tapestry-5-5.4.3\tapestry-core\src\main\java\org\apache\tapestry5\dom\DTD.java-47-            {
+tapestry-core\src\main\java\org\apache\tapestry5\dom\DTD.java:48:                writer.printf("<!DOCTYPE %s PUBLIC \"%s\" \"%s\">", name, publicId, systemId);
+c:\Users\Isidor\projects\CoSec\cosec-ai-main\unpatched\tapestry-5-5.4.3\tapestry-core\src\main\java\org\apache\tapestry5\dom\DTD.java-49-            } else
+c:\Users\Isidor\projects\CoSec\cosec-ai-main\unpatched\tapestry-5-5.4.3\tapestry-core\src\main\java\org\apache\tapestry5\dom\DTD.java-50-            {
+tapestry-core\src\main\java\org\apache\tapestry5\dom\DTD.java:51:                writer.printf("<!DOCTYPE %s PUBLIC \"%s\">", name, publicId);
+c:\Users\Isidor\projects\CoSec\cosec-ai-main\unpatched\tapestry-5-5.4.3\tapestry-core\src\main\java\org\apache\tapestry5\dom\DTD.java-52-            }
+c:\Users\Isidor\projects\CoSec\cosec-ai-main\unpatched\tapestry-5-5.4.3\tapestry-core\src\main\java\org\apache\tapestry5\dom\DTD.java-53-        } else if (systemId != null)
+c:\Users\Isidor\projects\CoSec\cosec-ai-main\unpatched\tapestry-5-5.4.3\tapestry-core\src\main\java\org\apache\tapestry5\dom\DTD.java-54-        {
+tapestry-core\src\main\java\org\apache\tapestry5\dom\DTD.java:55:            writer.printf("<!DOCTYPE %s SYSTEM \"%s\">", name, systemId);
+c:\Users\Isidor\projects\CoSec\cosec-ai-main\unpatched\tapestry-5-5.4.3\tapestry-core\src\main\java\org\apache\tapestry5\dom\DTD.java-56-        } else
+c:\Users\Isidor\projects\CoSec\cosec-ai-main\unpatched\tapestry-5-5.4.3\tapestry-core\src\main\java\org\apache\tapestry5\dom\DTD.java-57-        {
+tapestry-core\src\main\java\org\apache\tapestry5\dom\DTD.java:58:            writer.printf("<!DOCTYPE %s>", name);
+c:\Users\Isidor\projects\CoSec\cosec-ai-main\unpatched\tapestry-5-5.4.3\tapestry-core\src\main\java\org\apache\tapestry5\dom\DTD.java-59-        }
+c:\Users\Isidor\projects\CoSec\cosec-ai-main\unpatched\tapestry-5-5.4.3\tapestry-core\src\main\java\org\apache\tapestry5\dom\DTD.java-60-    }
+c:\Users\Isidor\projects\CoSec\cosec-ai-main\unpatched\tapestry-5-5.4.3\tapestry-core\src\main\java\org\apache\tapestry5\dom\DTD.java-61-}
+--
+c:\Users\Isidor\projects\CoSec\cosec-ai-main\unpatched\tapestry-5-5.4.3\tapestry-core\src\main\java\org\apache\tapestry5\dom\Document.java-39-
+c:\Users\Isidor\projects\CoSec\cosec-ai-main\unpatched\tapestry-5-5.4.3\tapestry-core\src\main\java\org\apache\tapestry5\dom\Document.java-40-    private Element rootElement;
+c:\Users\Isidor\projects\CoSec\cosec-ai-main\unpatched\tapestry-5-5.4.3\tapestry-core\src\main\java\org\apache\tapestry5\dom\Document.java-41-
+tapestry-core\src\main\java\org\apache\tapestry5\dom\Document.java:42:    private DTD dtd;
+c:\Users\Isidor\projects\CoSec\cosec-ai-main\unpatched\tapestry-5-5.4.3\tapestry-core\src\main\java\org\apache\tapestry5\dom\Document.java-43-
+c:\Users\Isidor\projects\CoSec\cosec-ai-main\unpatched\tapestry-5-5.4.3\tapestry-core\src\main\java\org\apache\tapestry5\dom\Document.java-44-    private final MarkupModel model;
+c:\Users\Isidor\projects\CoSec\cosec-ai-main\unpatched\tapestry-5-5.4.3\tapestry-core\src\main\java\org\apache\tapestry5\dom\Document.java-45-
+--
+c:\Users\Isidor\projects\CoSec\cosec-ai-main\unpatched\tapestry-5-5.4.3\tapestry-core\src\main\java\org\apache\tapestry5\dom\Document.java-48-    private final String mimeType;
+c:\Users\Isidor\projects\CoSec\cosec-ai-main\unpatched\tapestry-5-5.4.3\tapestry-core\src\main\java\org\apache\tapestry5\dom\Document.java-49-
+c:\Users\Isidor\projects\CoSec\cosec-ai-main\unpatched\tapestry-5-5.4.3\tapestry-core\src\main\java\org\apache\tapestry5\dom\Document.java-50-    /**
+tapestry-core\src\main\java\org\apache\tapestry5\dom\Document.java:51:     * Non-element content that comes between the DOCTYPE and the root element.
+c:\Users\Isidor\projects\CoSec\cosec-ai-main\unpatched\tapestry-5-5.4.3\tapestry-core\src\main\java\org\apache\tapestry5\dom\Document.java-52-     */
+c:\Users\Isidor\projects\CoSec\cosec-ai-main\unpatched\tapestry-5-5.4.3\tapestry-core\src\main\java\org\apache\tapestry5\dom\Document.java-53-    private List<Node> preamble;
+c:\Users\Isidor\projects\CoSec\cosec-ai-main\unpatched\tapestry-5-5.4.3\tapestry-core\src\main\java\org\apache\tapestry5\dom\Document.java-54-
+--
+c:\Users\Isidor\projects\CoSec\cosec-ai-main\unpatched\tapestry-5-5.4.3\tapestry-core\src\main\java\org\apache\tapestry5\dom\Document.java-205-    }
+c:\Users\Isidor\projects\CoSec\cosec-ai-main\unpatched\tapestry-5-5.4.3\tapestry-core\src\main\java\org\apache\tapestry5\dom\Document.java-206-
+c:\Users\Isidor\projects\CoSec\cosec-ai-main\unpatched\tapestry-5-5.4.3\tapestry-core\src\main\java\org\apache\tapestry5\dom\Document.java-207-    /**
+tapestry-core\src\main\java\org\apache\tapestry5\dom\Document.java:208:     * Sets the DTD for the document, overriding any prior DTD.
+c:\Users\Isidor\projects\CoSec\cosec-ai-main\unpatched\tapestry-5-5.4.3\tapestry-core\src\main\java\org\apache\tapestry5\dom\Document.java-209-     *
+c:\Users\Isidor\projects\CoSec\cosec-ai-main\unpatched\tapestry-5-5.4.3\tapestry-core\src\main\java\org\apache\tapestry5\dom\Document.java-210-     * @param name     non-blank name of document type (i.e., "html")
+c:\Users\Isidor\projects\CoSec\cosec-ai-main\unpatched\tapestry-5-5.4.3\tapestry-core\src\main\java\org\apache\tapestry5\dom\Document.java-211-     * @param publicId optional
+--
+c:\Users\Isidor\projects\CoSec\cosec-ai-main\unpatched\tapestry-5-5.4.3\tapestry-core\src\main\java\org\apache\tapestry5\dom\Document.java-213-     */
+c:\Users\Isidor\projects\CoSec\cosec-ai-main\unpatched\tapestry-5-5.4.3\tapestry-core\src\main\java\org\apache\tapestry5\dom\Document.java-214-    public void dtd(String name, String publicId, String systemId)
+c:\Users\Isidor\projects\CoSec\cosec-ai-main\unpatched\tapestry-5-5.4.3\tapestry-core\src\main\java\org\apache\tapestry5\dom\Document.java-215-    {
+tapestry-core\src\main\java\org\apache\tapestry5\dom\Document.java:216:        dtd = new DTD(name, publicId, systemId);
+c:\Users\Isidor\projects\CoSec\cosec-ai-main\unpatched\tapestry-5-5.4.3\tapestry-core\src\main\java\org\apache\tapestry5\dom\Document.java-217-    }
+c:\Users\Isidor\projects\CoSec\cosec-ai-main\unpatched\tapestry-5-5.4.3\tapestry-core\src\main\java\org\apache\tapestry5\dom\Document.java-218-
+c:\Users\Isidor\projects\CoSec\cosec-ai-main\unpatched\tapestry-5-5.4.3\tapestry-core\src\main\java\org\apache\tapestry5\dom\Document.java-219-    /**
+tapestry-core\src\main\java\org\apache\tapestry5\dom\Document.java:220:     * Returns true if the document has an explicit DTD (set via {@link #dtd(String, String, String)}).
+c:\Users\Isidor\projects\CoSec\cosec-ai-main\unpatched\tapestry-5-5.4.3\tapestry-core\src\main\java\org\apache\tapestry5\dom\Document.java-221-     *
+c:\Users\Isidor\projects\CoSec\cosec-ai-main\unpatched\tapestry-5-5.4.3\tapestry-core\src\main\java\org\apache\tapestry5\dom\Document.java-222-     * @since 5.3
+c:\Users\Isidor\projects\CoSec\cosec-ai-main\unpatched\tapestry-5-5.4.3\tapestry-core\src\main\java\org\apache\tapestry5\dom\Document.java-223-     */
+tapestry-core\src\main\java\org\apache\tapestry5\dom\Document.java:224:    public boolean hasDTD()
+c:\Users\Isidor\projects\CoSec\cosec-ai-main\unpatched\tapestry-5-5.4.3\tapestry-core\src\main\java\org\apache\tapestry5\dom\Document.java-225-    {
+c:\Users\Isidor\projects\CoSec\cosec-ai-main\unpatched\tapestry-5-5.4.3\tapestry-core\src\main\java\org\apache\tapestry5\dom\Document.java-226-        return dtd != null;
+c:\Users\Isidor\projects\CoSec\cosec-ai-main\unpatched\tapestry-5-5.4.3\tapestry-core\src\main\java\org\apache\tapestry5\dom\Document.java-227-    }
+--
+c:\Users\Isidor\projects\CoSec\cosec-ai-main\unpatched\tapestry-5-5.4.3\tapestry-core\src\test\java\org\apache\tapestry5\internal\services\TemplateParserImplTest.java-232-
+c:\Users\Isidor\projects\CoSec\cosec-ai-main\unpatched\tapestry-5-5.4.3\tapestry-core\src\test\java\org\apache\tapestry5\internal\services\TemplateParserImplTest.java-233-        assertEquals(tokens.size(), 5);
+c:\Users\Isidor\projects\CoSec\cosec-ai-main\unpatched\tapestry-5-5.4.3\tapestry-core\src\test\java\org\apache\tapestry5\internal\services\TemplateParserImplTest.java-234-
+tapestry-core\src\test\java\org\apache\tapestry5\internal\services\TemplateParserImplTest.java:235:        DTDToken t0 = get(tokens, 0);
+c:\Users\Isidor\projects\CoSec\cosec-ai-main\unpatched\tapestry-5-5.4.3\tapestry-core\src\test\java\org\apache\tapestry5\internal\services\TemplateParserImplTest.java-236-
+c:\Users\Isidor\projects\CoSec\cosec-ai-main\unpatched\tapestry-5-5.4.3\tapestry-core\src\test\java\org\apache\tapestry5\internal\services\TemplateParserImplTest.java-237-        assertEquals(t0.name, "html");
+tapestry-core\src\test\java\org\apache\tapestry5\internal\services\TemplateParserImplTest.java:238:        assertEquals(t0.publicId, "-//W3C//DTD XHTML 1.0 Transitional//EN");
+tapestry-core\src\test\java\org\apache\tapestry5\internal\services\TemplateParserImplTest.java:239:        assertEquals(t0.systemId, "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd");
+c:\Users\Isidor\projects\CoSec\cosec-ai-main\unpatched\tapestry-5-5.4.3\tapestry-core\src\test\java\org\apache\tapestry5\internal\services\TemplateParserImplTest.java-240-
+c:\Users\Isidor\projects\CoSec\cosec-ai-main\unpatched\tapestry-5-5.4.3\tapestry-core\src\test\java\org\apache\tapestry5\internal\services\TemplateParserImplTest.java-241-        StartElementToken t1 = get(tokens, 1);
+c:\Users\Isidor\projects\CoSec\cosec-ai-main\unpatched\tapestry-5-5.4.3\tapestry-core\src\test\java\org\apache\tapestry5\internal\services\TemplateParserImplTest.java-242-
+--
+c:\Users\Isidor\projects\CoSec\cosec-ai-main\unpatched\tapestry-5-5.4.3\tapestry-core\src\test\java\org\apache\tapestry5\internal\services\TemplateParserImplTest.java-255-        // be output as numeric entities. This is less than ideal; would like
+c:\Users\Isidor\projects\CoSec\cosec-ai-main\unpatched\tapestry-5-5.4.3\tapestry-core\src\test\java\org\apache\tapestry5\internal\services\TemplateParserImplTest.java-256-        // to find a way to keep the entities in their original form (possibly
+c:\Users\Isidor\projects\CoSec\cosec-ai-main\unpatched\tapestry-5-5.4.3\tapestry-core\src\test\java\org\apache\tapestry5\internal\services\TemplateParserImplTest.java-257-        // involving a new type of token), but SAX seems to be fighting me on this.
+tapestry-core\src\test\java\org\apache\tapestry5\internal\services\TemplateParserImplTest.java:258:        // You have to have a DOCTYPE just to parse a template that uses
+c:\Users\Isidor\projects\CoSec\cosec-ai-main\unpatched\tapestry-5-5.4.3\tapestry-core\src\test\java\org\apache\tapestry5\internal\services\TemplateParserImplTest.java-259-        // an HTML entity.
+c:\Users\Isidor\projects\CoSec\cosec-ai-main\unpatched\tapestry-5-5.4.3\tapestry-core\src\test\java\org\apache\tapestry5\internal\services\TemplateParserImplTest.java-260-
+tapestry-core\src\test\java\org\apache\tapestry5\internal\services\TemplateParserImplTest.java-261-        assertEquals(t.text.trim(), "nbsp:[\u00a0]");
+--
+c:\Users\Isidor\projects\CoSec\cosec-ai-main\unpatched\tapestry-5-5.4.3\tapestry-core\src\test\java\org\apache\tapestry5\internal\services\TemplateParserImplTest.java-781-    {
+c:\Users\Isidor\projects\CoSec\cosec-ai-main\unpatched\tapestry-5-5.4.3\tapestry-core\src\test\java\org\apache\tapestry5\internal\services\TemplateParserImplTest.java-782-        return new Object[][]{
+c:\Users\Isidor\projects\CoSec\cosec-ai-main\unpatched\tapestry-5-5.4.3\tapestry-core\src\test\java\org\apache\tapestry5\internal\services\TemplateParserImplTest.java-783-
+tapestry-core\src\test\java\org\apache\tapestry5\internal\services\TemplateParserImplTest.java:784:                {"xhtml1_strict_doctype.tml", "html", "-//W3C//DTD XHTML 1.0 Strict//EN",
+tapestry-core\src\test\java\org\apache\tapestry5\internal\services\TemplateParserImplTest.java:785:                        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"},
+c:\Users\Isidor\projects\CoSec\cosec-ai-main\unpatched\tapestry-5-5.4.3\tapestry-core\src\test\java\org\apache\tapestry5\internal\services\TemplateParserImplTest.java-786-
+tapestry-core\src\test\java\org\apache\tapestry5\internal\services\TemplateParserImplTest.java:787:                {"xhtml1_transitional_doctype.tml", "html", "-//W3C//DTD XHTML 1.0 Transitional//EN",
+tapestry-core\src\test\java\org\apache\tapestry5\internal\services\TemplateParserImplTest.java:788:                        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"},
+c:\Users\Isidor\projects\CoSec\cosec-ai-main\unpatched\tapestry-5-5.4.3\tapestry-core\src\test\java\org\apache\tapestry5\internal\services\TemplateParserImplTest.java-789-
+tapestry-core\src\test\java\org\apache\tapestry5\internal\services\TemplateParserImplTest.java:790:                {"xhtml1_frameset_doctype.tml", "html", "-//W3C//DTD XHTML 1.0 Frameset//EN",
+tapestry-core\src\test\java\org\apache\tapestry5\internal\services\TemplateParserImplTest.java:791:                        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-frameset.dtd"},
+c:\Users\Isidor\projects\CoSec\cosec-ai-main\unpatched\tapestry-5-5.4.3\tapestry-core\src\test\java\org\apache\tapestry5\internal\services\TemplateParserImplTest.java-792-
+tapestry-core\src\test\java\org\apache\tapestry5\internal\services\TemplateParserImplTest.java:793:                {"html4_strict_doctype.tml", "HTML", "-//W3C//DTD HTML 4.01//EN",
+tapestry-core\src\test\java\org\apache\tapestry5\internal\services\TemplateParserImplTest.java-794-                        "http://www.w3.org/TR/html4/strict.dtd"},
+c:\Users\Isidor\projects\CoSec\cosec-ai-main\unpatched\tapestry-5-5.4.3\tapestry-core\src\test\java\org\apache\tapestry5\internal\services\TemplateParserImplTest.java-795-
+tapestry-core\src\test\java\org\apache\tapestry5\internal\services\TemplateParserImplTest.java:796:                {"html4_transitional_doctype.tml", "HTML", "-//W3C//DTD HTML 4.01 Transitional//EN",
+tapestry-core\src\test\java\org\apache\tapestry5\internal\services\TemplateParserImplTest.java-797-                        "http://www.w3.org/TR/html4/loose.dtd"},
+c:\Users\Isidor\projects\CoSec\cosec-ai-main\unpatched\tapestry-5-5.4.3\tapestry-core\src\test\java\org\apache\tapestry5\internal\services\TemplateParserImplTest.java-798-
+tapestry-core\src\test\java\org\apache\tapestry5\internal\services\TemplateParserImplTest.java:799:                {"html4_frameset_doctype.tml", "HTML", "-//W3C//DTD HTML 4.01 Frameset//EN",
+tapestry-core\src\test\java\org\apache\tapestry5\internal\services\TemplateParserImplTest.java-800-                        "http://www.w3.org/TR/html4/frameset.dtd"},
+c:\Users\Isidor\projects\CoSec\cosec-ai-main\unpatched\tapestry-5-5.4.3\tapestry-core\src\test\java\org\apache\tapestry5\internal\services\TemplateParserImplTest.java-801-
+c:\Users\Isidor\projects\CoSec\cosec-ai-main\unpatched\tapestry-5-5.4.3\tapestry-core\src\test\java\org\apache\tapestry5\internal\services\TemplateParserImplTest.java-802-                {"system_doctype.xml", "foo", null,
+--
+c:\Users\Isidor\projects\CoSec\cosec-ai-main\unpatched\tapestry-5-5.4.3\tapestry-core\src\test\java\org\apache\tapestry5\internal\services\TemplateParserImplTest.java-809-        System.setProperty("user.dir", TapestryRunnerConstants.MODULE_BASE_DIR_PATH);
+c:\Users\Isidor\projects\CoSec\cosec-ai-main\unpatched\tapestry-5-5.4.3\tapestry-core\src\test\java\org\apache\tapestry5\internal\services\TemplateParserImplTest.java-810-
+c:\Users\Isidor\projects\CoSec\cosec-ai-main\unpatched\tapestry-5-5.4.3\tapestry-core\src\test\java\org\apache\tapestry5\internal\services\TemplateParserImplTest.java-811-        List<TemplateToken> tokens = tokens(fileName);
+tapestry-core\src\test\java\org\apache\tapestry5\internal\services\TemplateParserImplTest.java:812:        DTDToken t0 = get(tokens, 0);
+c:\Users\Isidor\projects\CoSec\cosec-ai-main\unpatched\tapestry-5-5.4.3\tapestry-core\src\test\java\org\apache\tapestry5\internal\services\TemplateParserImplTest.java-813-        assertEquals(t0.name, name);
+c:\Users\Isidor\projects\CoSec\cosec-ai-main\unpatched\tapestry-5-5.4.3\tapestry-core\src\test\java\org\apache\tapestry5\internal\services\TemplateParserImplTest.java-814-        assertEquals(t0.publicId, publicId);
+c:\Users\Isidor\projects\CoSec\cosec-ai-main\unpatched\tapestry-5-5.4.3\tapestry-core\src\test\java\org\apache\tapestry5\internal\services\TemplateParserImplTest.java-815-        assertEquals(t0.systemId, systemId);
+--
+c:\Users\Isidor\projects\CoSec\cosec-ai-main\unpatched\tapestry-5-5.4.3\tapestry-core\src\test\java\org\apache\tapestry5\internal\services\TemplateParserImplTest.java-968-
+c:\Users\Isidor\projects\CoSec\cosec-ai-main\unpatched\tapestry-5-5.4.3\tapestry-core\src\test\java\org\apache\tapestry5\internal\services\TemplateParserImplTest.java-969-        assertEquals(tokens.size(), 5);
+c:\Users\Isidor\projects\CoSec\cosec-ai-main\unpatched\tapestry-5-5.4.3\tapestry-core\src\test\java\org\apache\tapestry5\internal\services\TemplateParserImplTest.java-970-
+tapestry-core\src\test\java\org\apache\tapestry5\internal\services\TemplateParserImplTest.java:971:        DTDToken token0 = get(tokens, 0);
+tapestry-core\src\test\java\org\apache\tapestry5\internal\services\TemplateParserImplTest.java:972:        assertEquals(token0.toString(), "DTD[name=html; publicId=null; systemId=null]");
+c:\Users\Isidor\projects\CoSec\cosec-ai-main\unpatched\tapestry-5-5.4.3\tapestry-core\src\test\java\org\apache\tapestry5\internal\services\TemplateParserImplTest.java-973-
+c:\Users\Isidor\projects\CoSec\cosec-ai-main\unpatched\tapestry-5-5.4.3\tapestry-core\src\test\java\org\apache\tapestry5\internal\services\TemplateParserImplTest.java-974-        TextToken token3 = get(tokens, 3);
+c:\Users\Isidor\projects\CoSec\cosec-ai-main\unpatched\tapestry-5-5.4.3\tapestry-core\src\test\java\org\apache\tapestry5\internal\services\TemplateParserImplTest.java-975-
+--
+c:\Users\Isidor\projects\CoSec\cosec-ai-main\unpatched\tapestry-5-5.4.3\tapestry-core\src\test\java\org\apache\tapestry5\internal\services\TemplateParserImplTest.java-1046-    }
+c:\Users\Isidor\projects\CoSec\cosec-ai-main\unpatched\tapestry-5-5.4.3\tapestry-core\src\test\java\org\apache\tapestry5\internal\services\TemplateParserImplTest.java-1047-
+c:\Users\Isidor\projects\CoSec\cosec-ai-main\unpatched\tapestry-5-5.4.3\tapestry-core\src\test\java\org\apache\tapestry5\internal\services\TemplateParserImplTest.java-1048-    @Test
+tapestry-core\src\test\java\org\apache\tapestry5\internal\services\TemplateParserImplTest.java:1049:    public void t54_DTDs_are_strict_about_mixin_parameters() {
+c:\Users\Isidor\projects\CoSec\cosec-ai-main\unpatched\tapestry-5-5.4.3\tapestry-core\src\test\java\org\apache\tapestry5\internal\services\TemplateParserImplTest.java-1050-
+c:\Users\Isidor\projects\CoSec\cosec-ai-main\unpatched\tapestry-5-5.4.3\tapestry-core\src\test\java\org\apache\tapestry5\internal\services\TemplateParserImplTest.java-1051-        assertTrue(parse("instrumented_element.tml").usesStrictMixinParameters());
+c:\Users\Isidor\projects\CoSec\cosec-ai-main\unpatched\tapestry-5-5.4.3\tapestry-core\src\test\java\org\apache\tapestry5\internal\services\TemplateParserImplTest.java-1052-    }
+--
+c:\Users\Isidor\projects\CoSec\cosec-ai-main\unpatched\tapestry-5-5.4.3\tapestry-core\src\test\java\org\apache\tapestry5\internal\services\ParserExperiment.java-21-import org.xml.sax.helpers.DefaultHandler;
+c:\Users\Isidor\projects\CoSec\cosec-ai-main\unpatched\tapestry-5-5.4.3\tapestry-core\src\test\java\org\apache\tapestry5\internal\services\ParserExperiment.java-22-
+c:\Users\Isidor\projects\CoSec\cosec-ai-main\unpatched\tapestry-5-5.4.3\tapestry-core\src\test\java\org\apache\tapestry5\internal\services\ParserExperiment.java-23-import javax.xml.parsers.SAXParser;
+tapestry-core\src\test\java\org\apache\tapestry5\internal\services\ParserExperiment.java:24:import javax.xml.parsers.SAXParserFactory;
+c:\Users\Isidor\projects\CoSec\cosec-ai-main\unpatched\tapestry-5-5.4.3\tapestry-core\src\test\java\org\apache\tapestry5\internal\services\ParserExperiment.java-25-import java.io.BufferedInputStream;
+c:\Users\Isidor\projects\CoSec\cosec-ai-main\unpatched\tapestry-5-5.4.3\tapestry-core\src\test\java\org\apache\tapestry5\internal\services\ParserExperiment.java-26-import java.net.URL;
+c:\Users\Isidor\projects\CoSec\cosec-ai-main\unpatched\tapestry-5-5.4.3\tapestry-core\src\test\java\org\apache\tapestry5\internal\services\ParserExperiment.java-27-
+--
+c:\Users\Isidor\projects\CoSec\cosec-ai-main\unpatched\tapestry-5-5.4.3\tapestry-core\src\test\java\org\apache\tapestry5\internal\services\ParserExperiment.java-44-
+c:\Users\Isidor\projects\CoSec\cosec-ai-main\unpatched\tapestry-5-5.4.3\tapestry-core\src\test\java\org\apache\tapestry5\internal\services\ParserExperiment.java-45-    public void parse(URL document) throws Exception
+c:\Users\Isidor\projects\CoSec\cosec-ai-main\unpatched\tapestry-5-5.4.3\tapestry-core\src\test\java\org\apache\tapestry5\internal\services\ParserExperiment.java-46-    {
+tapestry-core\src\test\java\org\apache\tapestry5\internal\services\ParserExperiment.java:47:        SAXParserFactory factory = SAXParserFactory.newInstance();
+c:\Users\Isidor\projects\CoSec\cosec-ai-main\unpatched\tapestry-5-5.4.3\tapestry-core\src\test\java\org\apache\tapestry5\internal\services\ParserExperiment.java-48-
+c:\Users\Isidor\projects\CoSec\cosec-ai-main\unpatched\tapestry-5-5.4.3\tapestry-core\src\test\java\org\apache\tapestry5\internal\services\ParserExperiment.java-49-        factory.setNamespaceAware(true);
+tapestry-core\src\test\java\org\apache\tapestry5\internal\services\ParserExperiment.java-50-        \ Equivalent:
+tapestry-core\src\test\java\org\apache\tapestry5\internal\services\ParserExperiment.java:51:        // factory.setFeature("http://xml.org/sax/features/namespaces", true);
+c:\Users\Isidor\projects\CoSec\cosec-ai-main\unpatched\tapestry-5-5.4.3\tapestry-core\src\test\java\org\apache\tapestry5\internal\services\ParserExperiment.java-52-
+tapestry-core\src\test\java\org\apache\tapestry5\internal\services\ParserExperiment.java-53-        \ Doesn't seem to do anything:
+tapestry-core\src\test\java\org\apache\tapestry5\internal\services\ParserExperiment.java:54:        factory.setFeature("http://apache.org/xml/features/validation/schema/normalized-value", true);
+c:\Users\Isidor\projects\CoSec\cosec-ai-main\unpatched\tapestry-5-5.4.3\tapestry-core\src\test\java\org\apache\tapestry5\internal\services\ParserExperiment.java-55-
+tapestry-core\src\test\java\org\apache\tapestry5\internal\services\ParserExperiment.java-56-        \ Doesn't seem to do anything:
+tapestry-core\src\test\java\org\apache\tapestry5\internal\services\ParserExperiment.java:57:        factory.setFeature("http://xml.org/sax/features/namespace-prefixes", true);
+
+[Showing results with pagination = limit: 250]

@@ -1,0 +1,129 @@
+c:\Users\Isidor\projects\CoSec\cosec-ai-main\unpatched\tapestry-5-5.4.3\tapestry-javadoc\src\main\java\org\apache\tapestry5\javadoc\XDocStreamer.java-16-import org.xml.sax.SAXException;
+c:\Users\Isidor\projects\CoSec\cosec-ai-main\unpatched\tapestry-5-5.4.3\tapestry-javadoc\src\main\java\org\apache\tapestry5\javadoc\XDocStreamer.java-17-import org.xml.sax.XMLReader;
+c:\Users\Isidor\projects\CoSec\cosec-ai-main\unpatched\tapestry-5-5.4.3\tapestry-javadoc\src\main\java\org\apache\tapestry5\javadoc\XDocStreamer.java-18-import org.xml.sax.ext.LexicalHandler;
+tapestry-javadoc\src\main\java\org\apache\tapestry5\javadoc\XDocStreamer.java:19:import org.xml.sax.helpers.XMLReaderFactory;
+c:\Users\Isidor\projects\CoSec\cosec-ai-main\unpatched\tapestry-5-5.4.3\tapestry-javadoc\src\main\java\org\apache\tapestry5\javadoc\XDocStreamer.java-20-
+c:\Users\Isidor\projects\CoSec\cosec-ai-main\unpatched\tapestry-5-5.4.3\tapestry-javadoc\src\main\java\org\apache\tapestry5\javadoc\XDocStreamer.java-21-/**
+c:\Users\Isidor\projects\CoSec\cosec-ai-main\unpatched\tapestry-5-5.4.3\tapestry-javadoc\src\main\java\org\apache\tapestry5\javadoc\XDocStreamer.java-22- * Reads an XDOC file using SAX and streams its content (with some modifications) to
+--
+c:\Users\Isidor\projects\CoSec\cosec-ai-main\unpatched\tapestry-5-5.4.3\tapestry-javadoc\src\main\java\org\apache\tapestry5\javadoc\XDocStreamer.java-305-    {
+c:\Users\Isidor\projects\CoSec\cosec-ai-main\unpatched\tapestry-5-5.4.3\tapestry-javadoc\src\main\java\org\apache\tapestry5\javadoc\XDocStreamer.java-306-        SaxHandler handler = new SaxHandler();
+c:\Users\Isidor\projects\CoSec\cosec-ai-main\unpatched\tapestry-5-5.4.3\tapestry-javadoc\src\main\java\org\apache\tapestry5\javadoc\XDocStreamer.java-307-
+tapestry-javadoc\src\main\java\org\apache\tapestry5\javadoc\XDocStreamer.java:308:        XMLReader reader = XMLReaderFactory.createXMLReader();
+c:\Users\Isidor\projects\CoSec\cosec-ai-main\unpatched\tapestry-5-5.4.3\tapestry-javadoc\src\main\java\org\apache\tapestry5\javadoc\XDocStreamer.java-309-
+c:\Users\Isidor\projects\CoSec\cosec-ai-main\unpatched\tapestry-5-5.4.3\tapestry-javadoc\src\main\java\org\apache\tapestry5\javadoc\XDocStreamer.java-310-        reader.setContentHandler(handler);
+tapestry-javadoc\src\main\java\org\apache\tapestry5\javadoc\XDocStreamer.java-311-        reader.setProperty("http://xml.org/sax/properties/lexical-handler", handler);
+--
+c:\Users\Isidor\projects\CoSec\cosec-ai-main\unpatched\tapestry-5-5.4.3\tapestry-jpa\src\main\java\org\apache\tapestry5\internal\jpa\PersistenceParser.java-18-import org.apache.tapestry5.jpa.TapestryPersistenceUnitInfo;
+c:\Users\Isidor\projects\CoSec\cosec-ai-main\unpatched\tapestry-5-5.4.3\tapestry-jpa\src\main\java\org\apache\tapestry5\internal\jpa\PersistenceParser.java-19-import org.xml.sax.InputSource;
+c:\Users\Isidor\projects\CoSec\cosec-ai-main\unpatched\tapestry-5-5.4.3\tapestry-jpa\src\main\java\org\apache\tapestry5\internal\jpa\PersistenceParser.java-20-import org.xml.sax.XMLReader;
+tapestry-jpa\src\main\java\org\apache\tapestry5\internal\jpa\PersistenceParser.java:21:import org.xml.sax.helpers.XMLReaderFactory;
+c:\Users\Isidor\projects\CoSec\cosec-ai-main\unpatched\tapestry-5-5.4.3\tapestry-jpa\src\main\java\org\apache\tapestry5\internal\jpa\PersistenceParser.java-22-
+c:\Users\Isidor\projects\CoSec\cosec-ai-main\unpatched\tapestry-5-5.4.3\tapestry-jpa\src\main\java\org\apache\tapestry5\internal\jpa\PersistenceParser.java-23-import java.io.InputStream;
+c:\Users\Isidor\projects\CoSec\cosec-ai-main\unpatched\tapestry-5-5.4.3\tapestry-jpa\src\main\java\org\apache\tapestry5\internal\jpa\PersistenceParser.java-24-import java.util.List;
+--
+c:\Users\Isidor\projects\CoSec\cosec-ai-main\unpatched\tapestry-5-5.4.3\tapestry-jpa\src\main\java\org\apache\tapestry5\internal\jpa\PersistenceParser.java-33-
+c:\Users\Isidor\projects\CoSec\cosec-ai-main\unpatched\tapestry-5-5.4.3\tapestry-jpa\src\main\java\org\apache\tapestry5\internal\jpa\PersistenceParser.java-34-        try
+c:\Users\Isidor\projects\CoSec\cosec-ai-main\unpatched\tapestry-5-5.4.3\tapestry-jpa\src\main\java\org\apache\tapestry5\internal\jpa\PersistenceParser.java-35-        {
+tapestry-jpa\src\main\java\org\apache\tapestry5\internal\jpa\PersistenceParser.java:36:            final XMLReader reader = XMLReaderFactory.createXMLReader();
+c:\Users\Isidor\projects\CoSec\cosec-ai-main\unpatched\tapestry-5-5.4.3\tapestry-jpa\src\main\java\org\apache\tapestry5\internal\jpa\PersistenceParser.java-37-
+c:\Users\Isidor\projects\CoSec\cosec-ai-main\unpatched\tapestry-5-5.4.3\tapestry-jpa\src\main\java\org\apache\tapestry5\internal\jpa\PersistenceParser.java-38-            reader.setContentHandler(handler);
+c:\Users\Isidor\projects\CoSec\cosec-ai-main\unpatched\tapestry-5-5.4.3\tapestry-jpa\src\main\java\org\apache\tapestry5\internal\jpa\PersistenceParser.java-39-
+--
+c:\Users\Isidor\projects\CoSec\cosec-ai-main\unpatched\tapestry-5-5.4.3\plastic\src\external\java\org\apache\tapestry5\internal\plastic\asm\xml\Processor.java-35-import org.xml.sax.ext.LexicalHandler;
+c:\Users\Isidor\projects\CoSec\cosec-ai-main\unpatched\tapestry-5-5.4.3\plastic\src\external\java\org\apache\tapestry5\internal\plastic\asm\xml\Processor.java-36-import org.xml.sax.helpers.AttributesImpl;
+c:\Users\Isidor\projects\CoSec\cosec-ai-main\unpatched\tapestry-5-5.4.3\plastic\src\external\java\org\apache\tapestry5\internal\plastic\asm\xml\Processor.java-37-import org.xml.sax.helpers.DefaultHandler;
+plastic\src\external\java\org\apache\tapestry5\internal\plastic\asm\xml\Processor.java:38:import org.xml.sax.helpers.XMLReaderFactory;
+c:\Users\Isidor\projects\CoSec\cosec-ai-main\unpatched\tapestry-5-5.4.3\plastic\src\external\java\org\apache\tapestry5\internal\plastic\asm\xml\Processor.java-39-
+c:\Users\Isidor\projects\CoSec\cosec-ai-main\unpatched\tapestry-5-5.4.3\plastic\src\external\java\org\apache\tapestry5\internal\plastic\asm\xml\Processor.java-40-import javax.xml.transform.*;
+c:\Users\Isidor\projects\CoSec\cosec-ai-main\unpatched\tapestry-5-5.4.3\plastic\src\external\java\org\apache\tapestry5\internal\plastic\asm\xml\Processor.java-41-import javax.xml.transform.sax.SAXResult;
+--
+c:\Users\Isidor\projects\CoSec\cosec-ai-main\unpatched\tapestry-5-5.4.3\plastic\src\external\java\org\apache\tapestry5\internal\plastic\asm\xml\Processor.java-250-                cr.accept(new SAXClassAdapter(handler, singleInputDocument), 0);
+c:\Users\Isidor\projects\CoSec\cosec-ai-main\unpatched\tapestry-5-5.4.3\plastic\src\external\java\org\apache\tapestry5\internal\plastic\asm\xml\Processor.java-251-
+c:\Users\Isidor\projects\CoSec\cosec-ai-main\unpatched\tapestry-5-5.4.3\plastic\src\external\java\org\apache\tapestry5\internal\plastic\asm\xml\Processor.java-252-            } else { // read XML and process it with handler
+plastic\src\external\java\org\apache\tapestry5\internal\plastic\asm\xml\Processor.java:253:                XMLReader reader = XMLReaderFactory.createXMLReader();
+c:\Users\Isidor\projects\CoSec\cosec-ai-main\unpatched\tapestry-5-5.4.3\plastic\src\external\java\org\apache\tapestry5\internal\plastic\asm\xml\Processor.java-254-                reader.setContentHandler(handler);
+c:\Users\Isidor\projects\CoSec\cosec-ai-main\unpatched\tapestry-5-5.4.3\plastic\src\external\java\org\apache\tapestry5\internal\plastic\asm\xml\Processor.java-255-                reader.parse(new InputSource(
+c:\Users\Isidor\projects\CoSec\cosec-ai-main\unpatched\tapestry-5-5.4.3\plastic\src\external\java\org\apache\tapestry5\internal\plastic\asm\xml\Processor.java-256-                        singleInputDocument ? (InputStream) new ProtectedInputStream(
+--
+c:\Users\Isidor\projects\CoSec\cosec-ai-main\unpatched\tapestry-5-5.4.3\tapestry-core\src\main\java\org\apache\tapestry5\internal\services\MavenComponentLibraryInfoSource.java-23-import java.util.Set;
+c:\Users\Isidor\projects\CoSec\cosec-ai-main\unpatched\tapestry-5-5.4.3\tapestry-core\src\main\java\org\apache\tapestry5\internal\services\MavenComponentLibraryInfoSource.java-24-import java.util.WeakHashMap;
+c:\Users\Isidor\projects\CoSec\cosec-ai-main\unpatched\tapestry-5-5.4.3\tapestry-core\src\main\java\org\apache\tapestry5\internal\services\MavenComponentLibraryInfoSource.java-25-
+tapestry-core\src\main\java\org\apache\tapestry5\internal\services\MavenComponentLibraryInfoSource.java:26:import javax.xml.parsers.DocumentBuilder;
+tapestry-core\src\main\java\org\apache\tapestry5\internal\services\MavenComponentLibraryInfoSource.java:27:import javax.xml.parsers.DocumentBuilderFactory;
+c:\Users\Isidor\projects\CoSec\cosec-ai-main\unpatched\tapestry-5-5.4.3\tapestry-core\src\main\java\org\apache\tapestry5\internal\services\MavenComponentLibraryInfoSource.java-28-import javax.xml.xpath.XPath;
+c:\Users\Isidor\projects\CoSec\cosec-ai-main\unpatched\tapestry-5-5.4.3\tapestry-core\src\main\java\org\apache\tapestry5\internal\services\MavenComponentLibraryInfoSource.java-29-import javax.xml.xpath.XPathConstants;
+c:\Users\Isidor\projects\CoSec\cosec-ai-main\unpatched\tapestry-5-5.4.3\tapestry-core\src\main\java\org\apache\tapestry5\internal\services\MavenComponentLibraryInfoSource.java-30-import javax.xml.xpath.XPathExpression;
+--
+c:\Users\Isidor\projects\CoSec\cosec-ai-main\unpatched\tapestry-5-5.4.3\tapestry-core\src\main\java\org\apache\tapestry5\internal\services\MavenComponentLibraryInfoSource.java-54-    
+c:\Users\Isidor\projects\CoSec\cosec-ai-main\unpatched\tapestry-5-5.4.3\tapestry-core\src\main\java\org\apache\tapestry5\internal\services\MavenComponentLibraryInfoSource.java-55-    final private Map<String, String> pomPathToRootUrl;
+c:\Users\Isidor\projects\CoSec\cosec-ai-main\unpatched\tapestry-5-5.4.3\tapestry-core\src\main\java\org\apache\tapestry5\internal\services\MavenComponentLibraryInfoSource.java-56-    
+tapestry-core\src\main\java\org\apache\tapestry5\internal\services\MavenComponentLibraryInfoSource.java:57:    final private DocumentBuilderFactory documentBuilderFactory = DocumentBuilderFactory.newInstance();
+c:\Users\Isidor\projects\CoSec\cosec-ai-main\unpatched\tapestry-5-5.4.3\tapestry-core\src\main\java\org\apache\tapestry5\internal\services\MavenComponentLibraryInfoSource.java-58-
+c:\Users\Isidor\projects\CoSec\cosec-ai-main\unpatched\tapestry-5-5.4.3\tapestry-core\src\main\java\org\apache\tapestry5\internal\services\MavenComponentLibraryInfoSource.java-59-    public MavenComponentLibraryInfoSource(Logger logger, ClasspathScanner classpathScanner)
+c:\Users\Isidor\projects\CoSec\cosec-ai-main\unpatched\tapestry-5-5.4.3\tapestry-core\src\main\java\org\apache\tapestry5\internal\services\MavenComponentLibraryInfoSource.java-60-    {
+--
+c:\Users\Isidor\projects\CoSec\cosec-ai-main\unpatched\tapestry-5-5.4.3\tapestry-core\src\main\java\org\apache\tapestry5\internal\services\MavenComponentLibraryInfoSource.java-100-            
+c:\Users\Isidor\projects\CoSec\cosec-ai-main\unpatched\tapestry-5-5.4.3\tapestry-core\src\main\java\org\apache\tapestry5\internal\services\MavenComponentLibraryInfoSource.java-101-            try
+c:\Users\Isidor\projects\CoSec\cosec-ai-main\unpatched\tapestry-5-5.4.3\tapestry-core\src\main\java\org\apache\tapestry5\internal\services\MavenComponentLibraryInfoSource.java-102-            {
+tapestry-core\src\main\java\org\apache\tapestry5\internal\services\MavenComponentLibraryInfoSource.java:103:                DocumentBuilder documentBuilder = documentBuilderFactory.newDocumentBuilder();
+c:\Users\Isidor\projects\CoSec\cosec-ai-main\unpatched\tapestry-5-5.4.3\tapestry-core\src\main\java\org\apache\tapestry5\internal\services\MavenComponentLibraryInfoSource.java-104-                document = documentBuilder.parse(inputStream);
+c:\Users\Isidor\projects\CoSec\cosec-ai-main\unpatched\tapestry-5-5.4.3\tapestry-core\src\main\java\org\apache\tapestry5\internal\services\MavenComponentLibraryInfoSource.java-105-            }
+c:\Users\Isidor\projects\CoSec\cosec-ai-main\unpatched\tapestry-5-5.4.3\tapestry-core\src\main\java\org\apache\tapestry5\internal\services\MavenComponentLibraryInfoSource.java-106-            catch (Exception e)
+--
+c:\Users\Isidor\projects\CoSec\cosec-ai-main\unpatched\tapestry-5-5.4.3\tapestry-core\src\test\java\org\apache\tapestry5\internal\services\ParserExperiment.java-20-import org.xml.sax.SAXException;
+c:\Users\Isidor\projects\CoSec\cosec-ai-main\unpatched\tapestry-5-5.4.3\tapestry-core\src\test\java\org\apache\tapestry5\internal\services\ParserExperiment.java-21-import org.xml.sax.helpers.DefaultHandler;
+c:\Users\Isidor\projects\CoSec\cosec-ai-main\unpatched\tapestry-5-5.4.3\tapestry-core\src\test\java\org\apache\tapestry5\internal\services\ParserExperiment.java-22-
+tapestry-core\src\test\java\org\apache\tapestry5\internal\services\ParserExperiment.java:23:import javax.xml.parsers.SAXParser;
+tapestry-core\src\test\java\org\apache\tapestry5\internal\services\ParserExperiment.java:24:import javax.xml.parsers.SAXParserFactory;
+c:\Users\Isidor\projects\CoSec\cosec-ai-main\unpatched\tapestry-5-5.4.3\tapestry-core\src\test\java\org\apache\tapestry5\internal\services\ParserExperiment.java-25-import java.io.BufferedInputStream;
+c:\Users\Isidor\projects\CoSec\cosec-ai-main\unpatched\tapestry-5-5.4.3\tapestry-core\src\test\java\org\apache\tapestry5\internal\services\ParserExperiment.java-26-import java.net.URL;
+c:\Users\Isidor\projects\CoSec\cosec-ai-main\unpatched\tapestry-5-5.4.3\tapestry-core\src\test\java\org\apache\tapestry5\internal\services\ParserExperiment.java-27-
+--
+c:\Users\Isidor\projects\CoSec\cosec-ai-main\unpatched\tapestry-5-5.4.3\tapestry-core\src\test\java\org\apache\tapestry5\internal\services\ParserExperiment.java-44-
+c:\Users\Isidor\projects\CoSec\cosec-ai-main\unpatched\tapestry-5-5.4.3\tapestry-core\src\test\java\org\apache\tapestry5\internal\services\ParserExperiment.java-45-    public void parse(URL document) throws Exception
+c:\Users\Isidor\projects\CoSec\cosec-ai-main\unpatched\tapestry-5-5.4.3\tapestry-core\src\test\java\org\apache\tapestry5\internal\services\ParserExperiment.java-46-    {
+tapestry-core\src\test\java\org\apache\tapestry5\internal\services\ParserExperiment.java:47:        SAXParserFactory factory = SAXParserFactory.newInstance();
+c:\Users\Isidor\projects\CoSec\cosec-ai-main\unpatched\tapestry-5-5.4.3\tapestry-core\src\test\java\org\apache\tapestry5\internal\services\ParserExperiment.java-48-
+c:\Users\Isidor\projects\CoSec\cosec-ai-main\unpatched\tapestry-5-5.4.3\tapestry-core\src\test\java\org\apache\tapestry5\internal\services\ParserExperiment.java-49-        factory.setNamespaceAware(true);
+tapestry-core\src\test\java\org\apache\tapestry5\internal\services\ParserExperiment.java-50-        \ Equivalent:
+--
+c:\Users\Isidor\projects\CoSec\cosec-ai-main\unpatched\tapestry-5-5.4.3\tapestry-core\src\test\java\org\apache\tapestry5\internal\services\ParserExperiment.java-58-
+c:\Users\Isidor\projects\CoSec\cosec-ai-main\unpatched\tapestry-5-5.4.3\tapestry-core\src\test\java\org\apache\tapestry5\internal\services\ParserExperiment.java-59-        // A non-validation parser is fine!
+c:\Users\Isidor\projects\CoSec\cosec-ai-main\unpatched\tapestry-5-5.4.3\tapestry-core\src\test\java\org\apache\tapestry5\internal\services\ParserExperiment.java-60-
+tapestry-core\src\test\java\org\apache\tapestry5\internal\services\ParserExperiment.java:61:        SAXParser parser = factory.newSAXParser();
+c:\Users\Isidor\projects\CoSec\cosec-ai-main\unpatched\tapestry-5-5.4.3\tapestry-core\src\test\java\org\apache\tapestry5\internal\services\ParserExperiment.java-62-
+c:\Users\Isidor\projects\CoSec\cosec-ai-main\unpatched\tapestry-5-5.4.3\tapestry-core\src\test\java\org\apache\tapestry5\internal\services\ParserExperiment.java-63-        InputSource source = new InputSource(new BufferedInputStream(document.openStream()));
+c:\Users\Isidor\projects\CoSec\cosec-ai-main\unpatched\tapestry-5-5.4.3\tapestry-core\src\test\java\org\apache\tapestry5\internal\services\ParserExperiment.java-64-
+--
+c:\Users\Isidor\projects\CoSec\cosec-ai-main\unpatched\tapestry-5-5.4.3\tapestry-core\src\main\java\org\apache\tapestry5\internal\services\XMLTokenStream.java-23-import org.xml.sax.*;
+c:\Users\Isidor\projects\CoSec\cosec-ai-main\unpatched\tapestry-5-5.4.3\tapestry-core\src\main\java\org\apache\tapestry5\internal\services\XMLTokenStream.java-24-import org.xml.sax.ext.Attributes2;
+c:\Users\Isidor\projects\CoSec\cosec-ai-main\unpatched\tapestry-5-5.4.3\tapestry-core\src\main\java\org\apache\tapestry5\internal\services\XMLTokenStream.java-25-import org.xml.sax.ext.LexicalHandler;
+tapestry-core\src\main\java\org\apache\tapestry5\internal\services\XMLTokenStream.java:26:import org.xml.sax.helpers.XMLReaderFactory;
+c:\Users\Isidor\projects\CoSec\cosec-ai-main\unpatched\tapestry-5-5.4.3\tapestry-core\src\main\java\org\apache\tapestry5\internal\services\XMLTokenStream.java-27-
+c:\Users\Isidor\projects\CoSec\cosec-ai-main\unpatched\tapestry-5-5.4.3\tapestry-core\src\main\java\org\apache\tapestry5\internal\services\XMLTokenStream.java-28-import javax.xml.namespace.QName;
+c:\Users\Isidor\projects\CoSec\cosec-ai-main\unpatched\tapestry-5-5.4.3\tapestry-core\src\main\java\org\apache\tapestry5\internal\services\XMLTokenStream.java-29-import java.io.*;
+--
+c:\Users\Isidor\projects\CoSec\cosec-ai-main\unpatched\tapestry-5-5.4.3\tapestry-core\src\main\java\org\apache\tapestry5\internal\services\XMLTokenStream.java-313-    {
+c:\Users\Isidor\projects\CoSec\cosec-ai-main\unpatched\tapestry-5-5.4.3\tapestry-core\src\main\java\org\apache\tapestry5\internal\services\XMLTokenStream.java-314-        SaxHandler handler = new SaxHandler();
+c:\Users\Isidor\projects\CoSec\cosec-ai-main\unpatched\tapestry-5-5.4.3\tapestry-core\src\main\java\org\apache\tapestry5\internal\services\XMLTokenStream.java-315-
+tapestry-core\src\main\java\org\apache\tapestry5\internal\services\XMLTokenStream.java:316:        XMLReader reader = XMLReaderFactory.createXMLReader();
+c:\Users\Isidor\projects\CoSec\cosec-ai-main\unpatched\tapestry-5-5.4.3\tapestry-core\src\main\java\org\apache\tapestry5\internal\services\XMLTokenStream.java-317-
+c:\Users\Isidor\projects\CoSec\cosec-ai-main\unpatched\tapestry-5-5.4.3\tapestry-core\src\main\java\org\apache\tapestry5\internal\services\XMLTokenStream.java-318-        reader.setContentHandler(handler);
+c:\Users\Isidor\projects\CoSec\cosec-ai-main\unpatched\tapestry-5-5.4.3\tapestry-core\src\main\java\org\apache\tapestry5\internal\services\XMLTokenStream.java-319-        reader.setEntityResolver(handler);
+--
+c:\Users\Isidor\projects\CoSec\cosec-ai-main\unpatched\tapestry-5-5.4.3\tapestry-core\src\test\java\org\apache\tapestry5\integration\app1\services\MusicLibraryParser.java-23-import org.xml.sax.SAXException;
+c:\Users\Isidor\projects\CoSec\cosec-ai-main\unpatched\tapestry-5-5.4.3\tapestry-core\src\test\java\org\apache\tapestry5\integration\app1\services\MusicLibraryParser.java-24-import org.xml.sax.XMLReader;
+c:\Users\Isidor\projects\CoSec\cosec-ai-main\unpatched\tapestry-5-5.4.3\tapestry-core\src\test\java\org\apache\tapestry5\integration\app1\services\MusicLibraryParser.java-25-import org.xml.sax.helpers.DefaultHandler;
+tapestry-core\src\test\java\org\apache\tapestry5\integration\app1\services\MusicLibraryParser.java:26:import org.xml.sax.helpers.XMLReaderFactory;
+c:\Users\Isidor\projects\CoSec\cosec-ai-main\unpatched\tapestry-5-5.4.3\tapestry-core\src\test\java\org\apache\tapestry5\integration\app1\services\MusicLibraryParser.java-27-
+c:\Users\Isidor\projects\CoSec\cosec-ai-main\unpatched\tapestry-5-5.4.3\tapestry-core\src\test\java\org\apache\tapestry5\integration\app1\services\MusicLibraryParser.java-28-import java.io.BufferedInputStream;
+c:\Users\Isidor\projects\CoSec\cosec-ai-main\unpatched\tapestry-5-5.4.3\tapestry-core\src\test\java\org\apache\tapestry5\integration\app1\services\MusicLibraryParser.java-29-import java.io.InputStream;
+--
+c:\Users\Isidor\projects\CoSec\cosec-ai-main\unpatched\tapestry-5-5.4.3\tapestry-core\src\test\java\org\apache\tapestry5\integration\app1\services\MusicLibraryParser.java-370-
+c:\Users\Isidor\projects\CoSec\cosec-ai-main\unpatched\tapestry-5-5.4.3\tapestry-core\src\test\java\org\apache\tapestry5\integration\app1\services\MusicLibraryParser.java-371-        try
+c:\Users\Isidor\projects\CoSec\cosec-ai-main\unpatched\tapestry-5-5.4.3\tapestry-core\src\test\java\org\apache\tapestry5\integration\app1\services\MusicLibraryParser.java-372-        {
+tapestry-core\src\test\java\org\apache\tapestry5\integration\app1\services\MusicLibraryParser.java:373:            XMLReader reader = XMLReaderFactory.createXMLReader();
+c:\Users\Isidor\projects\CoSec\cosec-ai-main\unpatched\tapestry-5-5.4.3\tapestry-core\src\test\java\org\apache\tapestry5\integration\app1\services\MusicLibraryParser.java-374-
+c:\Users\Isidor\projects\CoSec\cosec-ai-main\unpatched\tapestry-5-5.4.3\tapestry-core\src\test\java\org\apache\tapestry5\integration\app1\services\MusicLibraryParser.java-375-            reader.setContentHandler(handler);
+c:\Users\Isidor\projects\CoSec\cosec-ai-main\unpatched\tapestry-5-5.4.3\tapestry-core\src\test\java\org\apache\tapestry5\integration\app1\services\MusicLibraryParser.java-376-            reader.setEntityResolver(handler);
