@@ -1,0 +1,76 @@
+import org.gradle.plugins.ide.idea.model.*
+import org.apache.tools.ant.filters.ReplaceTokens
+import t5build.*
+
+description = "Central module for Tapestry, containing all core services and components"
+
+project.ext {
+    mainGeneratedDir = "src/main/generated"
+    testGeneratedDir = "src/test/generated"
+}
+
+clean.delete mainGeneratedDir, testGeneratedDir
+
+dependencies {
+    compile project(':tapestry-ioc')
+    compile project(':tapestry-json')
+    compile project(':beanmodel')
+
+    provided project(":tapestry-test")
+    provided project(":tapestry-test-constants")
+
+    provided "javax.servlet:servlet-api:${versions.servletapi}"
+
+    compile "commons-codec:commons-codec:1.10"
+
+    testRuntime "org.hsqldb:hsqldb:1.8.0.10"
+
+    testRuntime 'com.google.inject:guice:3.0'
+}
+
+task preprocessCoffeeScript(type: PreprocessCoffeeScript) {
+}
+
+task compileCoffeeScript(type: CompileCoffeeScript) {
+    outputDir "${mainGeneratedDir}/compiled-coffeescript"
+}
+
+task compileProcessedCoffeescript(type: CompileCoffeeScript) {
+    dependsOn preprocessCoffeeScript
+    srcDir preprocessCoffeeScript.outputDir
+    outputDir "${mainGeneratedDir}/compiled-processed-coffeescript"
+}
+
+task compileTestCoffeeScript(type: CompileCoffeeScript) {
+    srcDir "src/test/coffeescript"
+    outputDir "${testGeneratedDir}/compiled-coffeescript"
+}
+
+sourceSets {
+    main {
+        output.dir(compileCoffeeScript.outputDir, builtBy: compileCoffeeScript)
+        output.dir(compileProcessedCoffeescript.outputDir, builtBy: compileProcessedCoffeescript)
+    }
+    test {
+        output.dir(compileTestCoffeeScript.outputDir, builtBy: compileTestCoffeeScript)
+    }
+}
+
+// Not sure why this is necessary:
+compileTestGroovy.dependsOn compileTestJava
+
+jar {
+    from("src/main/filtered-resources") {
+        filter(ReplaceTokens, tokens: [version: project.version])
+    }
+}
+
+task runTestApp1(type:JavaExec) {
+  main = 'org.apache.tapestry5.test.Jetty7Runner'
+  args "-d", "src/test/app1", "-p", "8080"
+  classpath += project.sourceSets.test.runtimeClasspath
+}
+
+task testWithPrototype(type:Test) {
+  systemProperties."tapestry.javascript-infrastructure-provider" = "prototype"
+}

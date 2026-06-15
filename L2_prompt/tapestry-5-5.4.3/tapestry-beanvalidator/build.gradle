@@ -1,0 +1,26 @@
+import t5build.*
+
+description = "Support for JSR-303 Bean Validation via the Hibernate validator implementation"
+
+dependencies {
+  compile project(':tapestry-core')
+
+  compile "javax.validation:validation-api:1.0.0.GA"
+  compile "org.hibernate:hibernate-validator:4.0.0.GA"
+
+  testCompile project(':tapestry-test')
+}
+
+task compileCoffeeScript(type: CompileCoffeeScript) {
+    outputDir "src/main/generated/compiled-coffeescript"
+}
+
+clean.delete 'src/main/generated'
+
+sourceSets {
+    main {
+        output.dir(compileCoffeeScript.outputDir, builtBy: compileCoffeeScript)
+    }
+}
+
+jar.manifest.attributes 'Tapestry-Module-Classes': 'org.apache.tapestry5.beanvalidator.modules.BeanValidatorModule'
