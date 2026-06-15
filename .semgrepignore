@@ -1,3 +1,12 @@
 .git
 README.md
 *.zip
+unpatched/
+semgrep/
+
+
+// Prompt histories
+*.jsonl
+*.json
+*.txt
+L0_prompt/Prompt\ histories/
