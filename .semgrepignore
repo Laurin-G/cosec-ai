@@ -9,4 +9,7 @@ semgrep/
 *.jsonl
 *.json
 *.txt
-L0_prompt/Prompt\ histories/
+*/Prompt\ histories/
+
+L0_prompt/
+L2_prompt/
