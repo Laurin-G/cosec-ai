@@ -209,6 +209,10 @@ subprojects {
         systemProperties["tapestry.service-reloading-enabled"] = "false"
         systemProperties["java.io.tmpdir"] = temporaryDir.absolutePath
 
+        // No real browser is installed in this environment, so Selenium-based integration tests
+        // drive an in-process, headless HtmlUnitDriver instead. See SeleniumTestCase.HTML_UNIT.
+        systemProperties["tapestry.browser-start-command"] = "*htmlunit"
+
         jvmArgs("-Dfile.encoding=UTF-8")
 
         environment.LANG = 'en_US.UTF-8'

@@ -10,7 +10,7 @@ import javax.servlet.http.HttpServletRequest
 class ResponseCompressionAnalyzerTest extends TestBase {
 
   @Test
-  void "HTTP/1.0 protocol disables gzip compression"() {
+  void http10ProtocolDisablesGzipCompression() {
 
     HttpServletRequest request = newMock(HttpServletRequest)
 
@@ -27,7 +27,7 @@ class ResponseCompressionAnalyzerTest extends TestBase {
 
   @Test
   //TAP5-2264
-  void "InternalConstants.SUPPRESS_COMPRESSION attribute disables gzip compression"() {
+  void suppressCompressionAttributeDisablesGzipCompression() {
 
     HttpServletRequest request = newMock(HttpServletRequest)
 

@@ -1,0 +1,15 @@
+# Build/test-execution artifacts produced by building or running the vendored
+# projects under L0_prompt/, L2_prompt/, and unpatched/. These are regenerated
+# by ./Configure, make, npm install/build, etc. and should never be committed.
+*.o
+*.a
+*.so
+
+# OpenSSL `make install` output (full duplicate of the build tree)
+**/openssl-OpenSSL_0_9_7/install/
+
+# Headless Chrome downloaded by Trilium's build/test tooling
+**/Trilium-0.100.0/apps/server/chrome/
+
+# OpenSSH regression test execution log
+**/openssh-portable-V_7_2_P2/regress/sshd.log

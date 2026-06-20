@@ -1,4 +1,6 @@
-driver = "firefox"
+// No real browser is installed in this environment, so drive an in-process, headless
+// HtmlUnitDriver instead of launching real Firefox.
+driver = { new org.openqa.selenium.htmlunit.HtmlUnitDriver(true) }
 
 baseUrl = "http://localhost:8080"
 

@@ -16,6 +16,9 @@ import com.thoughtworks.selenium.CommandProcessor;
 import com.thoughtworks.selenium.DefaultSelenium;
 import com.thoughtworks.selenium.HttpCommandProcessor;
 import com.thoughtworks.selenium.Selenium;
+import com.thoughtworks.selenium.webdriven.WebDriverCommandProcessor;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.htmlunit.HtmlUnitDriver;
 import org.openqa.selenium.server.SeleniumServer;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -46,6 +49,16 @@ public abstract class SeleniumTestCase extends Assert implements Selenium
     public static final String TOMCAT_6 = "tomcat6";
 
     public static final String JETTY_7 = "jetty7";
+
+    /**
+     * Browser-start-command value that drives an in-process, headless {@link HtmlUnitDriver} instead of
+     * launching a real browser via the (legacy) Selenium RC server. Useful in environments (e.g. CI, sandboxes)
+     * where no real browser is installed. Can be selected by setting the
+     * {@code tapestry.browser-start-command} system property or test parameter to this value.
+     *
+     * @since 5.4.4
+     */
+    public static final String HTML_UNIT = "*htmlunit";
 
     /**
      * An XPath expression for locating a submit element (very commonly used
@@ -190,20 +203,33 @@ public abstract class SeleniumTestCase extends Assert implements Selenium
 
         final Runnable stopWebServer = launchWebServer(container, webAppFolder, contextPath, port, sslPort);
 
-        final SeleniumServer seleniumServer = new SeleniumServer();
+        final SeleniumServer seleniumServer;
 
-        File ffProfileTemplate = new File(TapestryRunnerConstants.MODULE_BASE_DIR, "src/test/conf/ff_profile_template");
+        CommandProcessor httpCommandProcessor;
 
-        if (ffProfileTemplate.isDirectory())
+        if (HTML_UNIT.equals(browserStartCommand))
         {
-            seleniumServer.getConfiguration().setFirefoxProfileTemplate(ffProfileTemplate);
+            seleniumServer = null;
+
+            WebDriver driver = new HtmlUnitDriver(true);
+
+            httpCommandProcessor = new WebDriverCommandProcessor(baseURL, driver);
+        } else
+        {
+            seleniumServer = new SeleniumServer();
+
+            File ffProfileTemplate = new File(TapestryRunnerConstants.MODULE_BASE_DIR, "src/test/conf/ff_profile_template");
+
+            if (ffProfileTemplate.isDirectory())
+            {
+                seleniumServer.getConfiguration().setFirefoxProfileTemplate(ffProfileTemplate);
+            }
+
+            seleniumServer.start();
+
+            httpCommandProcessor = new HttpCommandProcessor("localhost",
+                    seleniumServer.getPort(), browserStartCommand, baseURL);
         }
-
-        seleniumServer.start();
-
-
-        CommandProcessor httpCommandProcessor = new HttpCommandProcessor("localhost",
-                seleniumServer.getPort(), browserStartCommand, baseURL);
 
         final ErrorReporterImpl errorReporter = new ErrorReporterImpl(httpCommandProcessor, testContext);
 
@@ -212,7 +238,12 @@ public abstract class SeleniumTestCase extends Assert implements Selenium
 
         final Selenium selenium = new DefaultSelenium(commandProcessor);
 
-        selenium.start();
+        // When backed by an already-live WebDriver instance (the HTML_UNIT case), the "session" is already
+        // started by virtue of the driver existing; calling start() again confuses the command processor.
+        if (seleniumServer != null)
+        {
+            selenium.start();
+        }
 
         testContext.setAttribute(TapestryTestConstants.BASE_URL_ATTRIBUTE, baseURL);
         testContext.setAttribute(TapestryTestConstants.SELENIUM_ATTRIBUTE, selenium);
@@ -236,14 +267,17 @@ public abstract class SeleniumTestCase extends Assert implements Selenium
                         LOGGER.error("Selenium client shutdown failure.", e);
                     }
 
-                    LOGGER.info("Shutting down selenium server ...");
+                    if (seleniumServer != null)
+                    {
+                        LOGGER.info("Shutting down selenium server ...");
 
-                    try
-                    {
-                        seleniumServer.stop();
-                    } catch (RuntimeException e)
-                    {
-                        LOGGER.error("Selenium server shutdown failure.", e);
+                        try
+                        {
+                            seleniumServer.stop();
+                        } catch (RuntimeException e)
+                        {
+                            LOGGER.error("Selenium server shutdown failure.", e);
+                        }
                     }
 
                     LOGGER.info("Shutting web server ...");
@@ -276,6 +310,13 @@ public abstract class SeleniumTestCase extends Assert implements Selenium
 
     private final String getParameter(XmlTest xmlTest, String key, String defaultValue)
     {
+        String systemPropertyValue = System.getProperty(key);
+
+        if (systemPropertyValue != null)
+        {
+            return systemPropertyValue;
+        }
+
         String value = xmlTest.getParameter(key);
 
         return value != null ? value : defaultValue;
