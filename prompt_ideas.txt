@@ -1,0 +1,87 @@
+Task:
+
+Search and evaluate this project for security relevant timing sidechannels. Focus your search to find all instances of CWE-208 ("Observable Timing Discrepancy"). Evaluate all findings for their actual security relevance. If a observable timing discrepancy is found and deemed security sensitive and therefore possibly a vulnerability, automatically apply patches to fix the CWE-208 and/or apply countermeasures to remove the exploitability. If a timing discrepancy is found but considered either not security relevant or not exploitable, you may note it, but don't apply patches, to avoid unnecessary source code changes. You only need to fix instances of CWE-208. You can ignore other, non-timing-sidechannel vulnerabilities. When modifying the code, pay attention to keep the business logic as is and the code syntactically correct.
+
+
+--------------
+BEGIN OF: ADDITIONAL INFORMATION ABOUT CWE-208:
+--------------
+
+Excerpt from https://cwe.mitre.org/data/definitions/208.html
+
+Name: CWE-208: Observable Timing Discrepancy
+Description: Two separate operations in a product require different amounts of time to complete, in a way that is observable to an actor and reveals security-relevant information about the state of the product, such as whether a particular operation was successful or not.
+Extended Description: In security-relevant contexts, even small variations in timing can be exploited by attackers to indirectly infer certain details about the product's internal operations. For example, in some cryptographic algorithms, attackers can use timing differences to infer certain properties about a private key, making the key easier to guess. Timing discrepancies effectively form a timing side channel.
+
+Demonstrative Examples:
+
+Example 1:
+
+Consider an example hardware module that checks a user-provided password to grant access to a user. The user-provided password is compared against a golden value in a byte-by-byte manner.
+(bad code)
+
+Example Language: Verilog
+
+always_comb @ (posedge clk)
+
+begin
+	assign check_pass[3:0] = 4'b0;
+	for (i = 0; i < 4; i++) begin
+		if (entered_pass[(i*8 - 1) : i] eq golden_pass([i*8 - 1) : i])
+			assign check_pass[i] = 1;
+			continue;
+		else
+			assign check_pass[i] = 0;
+			break;
+		end
+	assign grant_access = (check_pass == 4'b1111) ? 1'b1: 1'b0;
+end
+
+Since the code breaks on an incorrect entry of password, an attacker can guess the correct password for that byte-check iteration with few repeat attempts.
+
+To fix this weakness, either the comparison of the entire string should be done all at once, or the attacker is not given an indication whether pass or fail happened by allowing the comparison to run through all bits before the grant_access signal is set.
+
+(good code)
+
+Example Language: Verilog
+
+always_comb @ (posedge clk)
+begin
+	assign check_pass[3:0] = 4'b0;
+	for (i = 0; i < 4; i++) begin
+		if (entered_pass[(i*8 - 1) : i] eq golden_pass([i*8 -1) : i])
+			assign check_pass[i] = 1;
+			continue;
+		else
+			assign check_pass[i] = 0;
+			continue;
+		end
+	assign grant_access = (check_pass == 4'b1111) ? 1'b1: 1'b0;
+end
+
+
+Example 2
+
+In this example, the attacker observes how long an authentication takes when the user types in the correct password.
+
+When the attacker tries their own values, they can first try strings of various length. When they find a string of the right length, the computation will take a bit longer, because the for loop will run at least once. Additionally, with this code, the attacker can possibly learn one character of the password at a time, because when they guess the first character right, the computation will take longer than a wrong guesses. Such an attack can break even the most sophisticated password with a few hundred guesses.
+
+(bad code)
+
+Example Language: Python
+
+def validate_password(actual_pw, typed_pw):
+	if len(actual_pw) <> len(typed_pw):
+		return 0
+
+	for i in len(actual_pw):
+		if actual_pw[i] <> typed_pw[i]:
+		return 0
+
+	return 1
+
+Note that in this example, the actual password must be handled in constant time as far as the attacker is concerned, even if the actual password is of an unusual length. This is one reason why it is good to use an algorithm that, among other things, stores a seeded cryptographic one-way hash of the password, then compare the hashes, which will always be of the same length.
+
+--------------
+END OF: ADDITIONAL INFORMATION ABOUT CWE-208:
+--------------
