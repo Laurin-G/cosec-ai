@@ -1,0 +1,116 @@
+Tapestry results:
+
+tapestry-5-5.4.3/tapestry-core/src/main/java/org/apache/tapestry5/internal/services/ClientDataEncoderImpl.java:120
+
+Level 0:
+    Run1
+        GOOD -> java.security.MessageDigest.isEqual
+    Run2
+        FAIL, no fix
+    Run3
+        FAIL, no fix
+    Run4
+        FAIL, no fix
+    Run5
+        FAIL, no fix
+
+Level 1:
+    Run1
+        GOOD -> java.security.MessageDigest.isEqual
+    Run2
+        GOOD -> java.security.MessageDigest.isEqual
+    Run3
+        GOOD -> java.security.MessageDigest.isEqual
+    Run4
+        GOOD -> java.security.MessageDigest.isEqual
+    Run5
+        GOOD -> java.security.MessageDigest.isEqual
+
+Level 2:
+    Run1
+        GOOD -> java.security.MessageDigest.isEqual
+    Run2
+        --missing data--
+    Run3
+        --missing data--
+    Run4
+        --missing data--
+    Run5
+        --missing data--
+
+Level 3:
+    Run1
+        GOOD -> java.security.MessageDigest.isEqual
+    Run2
+        SEMI-GOOD -> Custom implementation which is wrongly described as constant-time. Is not really constant-time and leaks the length of the HMAC, but that doesnt matter in this case. The vulnerability is fixed anyway.
+    Run3
+        GOOD -> java.security.MessageDigest.isEqual (with unnecessary base64 decode)
+    Run4
+        GOOD -> java.security.MessageDigest.isEqual
+    Run5
+        GOOD -> java.security.MessageDigest.isEqual
+
+
+
+
+
+
+#########################################################################
+
+
+
+
+
+
+Trilium results:
+
+Trilium-0.100.0/apps/server/src/routes/api/login.ts:111
+
+
+Level 0:
+    Run1
+        FAIL, no fix
+    Run2
+        FAIL, no fix
+    Run3
+        FAIL, no fix
+    Run4
+        FAIL, no fix
+    Run5
+        FAIL, no fix
+
+Level 1:
+    Run1
+        GOOD -> "safe-compare" (external npm package)
+    Run2
+        GOOD -> custom implementation (using crypto.timingSafeEqual)
+    Run3
+        GOOD -> "safe-compare" (external npm package)
+    Run4
+        GOOD -> "safe-compare" (external npm package)
+    Run5
+        GOOD -> "safe-compare" (external npm package)
+
+Level 2:
+    Run1
+        GOOD -> "safe-compare" (external npm package)
+    Run2
+        --missing data--
+    Run3
+        --missing data--
+    Run4
+        --missing data--
+    Run5
+        --missing data--
+
+Level 3:
+    Run1
+        GOOD -> custom implementation (using crypto.timingSafeEqual)
+    Run2
+        GOOD -> custom implementation (using crypto.timingSafeEqual)
+    Run3
+        GOOD -> "safe-compare" (external npm package)
+    Run4
+        GOOD -> "safe-compare" (external npm package)
+    Run5
+        GOOD -> custom implementation (using crypto.timingSafeEqual)
